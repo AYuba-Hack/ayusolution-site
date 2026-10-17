@@ -7,10 +7,10 @@
   Cache-Control: public, max-age=604800
 
 /assets/css/*
-  Cache-Control: public, max-age=604800, immutable
+  Cache-Control: public, max-age=3600, must-revalidate
 
 /assets/js/*
-  Cache-Control: public, max-age=604800, immutable
+  Cache-Control: public, max-age=3600, must-revalidate
 
 /service-worker.js
   Cache-Control: no-cache, max-age=0
