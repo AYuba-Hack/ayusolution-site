@@ -105,7 +105,7 @@
             
             <ul class="nav-links" id="nav-menu">
                 <li><a href="#home" class="active" data-i18n="nav.home">Início</a></li>
-                <li><a href="#services" data-i18n="nav.services">Serviços</a></li>
+                <li><a href="#popular-services" data-i18n="nav.services">Serviços</a></li>
                 <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
                 <li><a href="#projects" data-i18n="nav.projects">Projectos</a></li>
                 <li><a href="#academic" data-i18n="nav.academic">Académico</a></li>
@@ -149,7 +149,7 @@
                 <div class="hero-rotator"><span data-i18n="hero.specialty">Especialidades:</span> <span class="rotating-service" id="rotatingService">Websites & Sistemas</span></div>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary" data-i18n="hero.quote">Pedir orçamento</a>
-                    <a href="#services" class="btn btn-outline" data-i18n="hero.btn1">Conhecer os nossos serviços</a>
+                    <a href="#popular-services" class="btn btn-outline" data-i18n="hero.btn1">Conhecer os nossos serviços</a>
                 </div>
             </div>
             <div class="hero-visual reveal">
@@ -163,6 +163,19 @@
             </div>
         </div>
     </section>
+
+<nav class="ayu-quicknav" aria-label="Acesso rápido às secções">
+ <div class="container ayu-quicknav-inner">
+  <span data-i18n="quick.explore">Explorar</span>
+  <a href="#home" data-i18n="nav.home">Início</a>
+  <a href="#popular-services" data-i18n="nav.services">Serviços</a>
+  <a href="#services" data-i18n="quick.details">Detalhes</a>
+  <a href="#projects" data-i18n="nav.projects">Projectos</a>
+  <a href="#about" data-i18n="nav.about">Sobre</a>
+  <a href="#guides" data-i18n="nav.guides">Guias</a>
+  <a href="#contact" class="ayu-quicknav-cta" data-i18n="nav.contact">Contactos</a>
+ </div>
+</nav>
 
     <!-- POPULAR SERVICES -->
     <section id="popular-services">
@@ -232,17 +245,27 @@
         </div>
     </div>
 
+<details class="ayu-panel" data-ayu-panel="services"><summary class="ayu-panel-summary"><span class="ayu-panel-title" data-i18n="panel.services.title">Todos os serviços em detalhe</span><span class="ayu-panel-subtitle" data-i18n="panel.services.sub">7 especialidades de informática e soluções digitais</span><span class="ayu-panel-arrow" aria-hidden="true"></span></summary>
     <!-- SERVICES SECTION -->
     <section id="services" class="section-padding">
         <div class="container">
             <span class="section-title reveal" data-i18n="services.title">O QUE FAZEMOS</span>
             <h2 class="section-heading reveal" data-i18n="services.heading">Soluções tecnológicas completas para impulsionar o seu dia a dia.</h2>
+<nav class="ayu-service-jumps" aria-label="Categorias de serviços">
+<a href="#servico-informatica" data-i18n="services.s1.title">Informática</a>
+<a href="#servico-impressoras" data-i18n="services.s2.title">Impressoras</a>
+<a href="#servico-redes" data-i18n="services.s3.title">Redes</a>
+<a href="#servico-cctv" data-i18n="services.s4.title">CCTV</a>
+<a href="#servico-web" data-i18n="services.s5.title">Web</a>
+<a href="#servico-gestao" data-i18n="services.s6.title">Gestão</a>
+<a href="#servico-digitais" data-i18n="services.s7.title">Digital</a>
+</nav>
 
             <!-- Service 01: Computer & IT -->
             <div class="service-row reveal">
                 <div class="service-content">
                     <span class="service-num">01 — Informática</span>
-                    <h3 data-i18n="services.s1.title">INFORMÁTICA E MANUTENÇÃO</h3>
+                    <h3 id="servico-informatica" data-i18n="services.s1.title">INFORMÁTICA E MANUTENÇÃO</h3>
                     <ul class="service-list">
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i1">Reparação de computadores</span></li>
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i2">Diagnóstico de problemas</span></li>
@@ -268,7 +291,7 @@
             <div class="service-row reverse reveal">
                 <div class="service-content">
                     <span class="service-num">02 — Equipamentos</span>
-                    <h3 data-i18n="services.s2.title">IMPRESSORAS E EQUIPAMENTOS</h3>
+                    <h3 id="servico-impressoras" data-i18n="services.s2.title">IMPRESSORAS E EQUIPAMENTOS</h3>
                     <ul class="service-list">
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i1">Instalação de impressoras</span></li>
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i2">Configuração de impressoras</span></li>
@@ -291,7 +314,7 @@
                 <div class="tech-card">
                     <i class="fas fa-network-wired tech-icon"></i>
                     <span class="service-num">03 — Redes</span>
-                    <h3 data-i18n="services.s3.title">REDES E CONECTIVIDADE</h3>
+                    <h3 id="servico-redes" data-i18n="services.s3.title">REDES E CONECTIVIDADE</h3>
                     <ul class="service-list" style="grid-template-columns: 1fr;">
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s3.i1">Instalação de redes Wi-Fi</span></li>
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s3.i2">Configuração de routers</span></li>
@@ -304,7 +327,7 @@
                 <div class="tech-card">
                     <i class="fas fa-shield-halved tech-icon"></i>
                     <span class="service-num">04 — Segurança</span>
-                    <h3 data-i18n="services.s4.title">CCTV E SEGURANÇA</h3>
+                    <h3 id="servico-cctv" data-i18n="services.s4.title">CCTV E SEGURANÇA</h3>
                     <ul class="service-list" style="grid-template-columns: 1fr;">
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s4.i1">Instalação de câmeras</span></li>
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s4.i2">Configuração de CCTV</span></li>
@@ -321,7 +344,7 @@
                 <div class="tech-card">
                     <i class="fas fa-code tech-icon"></i>
                     <span class="service-num">05 — Digital</span>
-                    <h3 data-i18n="services.s5.title">DESENVOLVIMENTO WEB</h3>
+                    <h3 id="servico-web" data-i18n="services.s5.title">DESENVOLVIMENTO WEB</h3>
                     <ul class="service-list" style="grid-template-columns: 1fr;">
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s5.i1">Websites empresariais</span></li>
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s5.i2">Websites pessoais</span></li>
@@ -334,7 +357,7 @@
                 <div class="tech-card">
                     <i class="fas fa-chart-line tech-icon"></i>
                     <span class="service-num">06 — Gestão</span>
-                    <h3 data-i18n="services.s6.title">SISTEMAS DE GESTÃO</h3>
+                    <h3 id="servico-gestao" data-i18n="services.s6.title">SISTEMAS DE GESTÃO</h3>
                     <ul class="service-list" style="grid-template-columns: 1fr;">
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s6.i1">Sistemas de vendas</span></li>
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s6.i2">Gestão de stock</span></li>
@@ -350,7 +373,7 @@
             <div class="service-row reveal">
                 <div class="service-content">
                     <span class="service-num">07 — Inovação</span>
-                    <h3 data-i18n="services.s7.title">SOLUÇÕES DIGITAIS</h3>
+                    <h3 id="servico-digitais" data-i18n="services.s7.title">SOLUÇÕES DIGITAIS</h3>
                     <ul class="service-list">
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s7.i1">Digitalização de processos</span></li>
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s7.i2">Organização de informação</span></li>
@@ -371,6 +394,7 @@
         </div>
     </section>
 
+</details>
     <!-- ABOUT & FOUNDER SECTION -->
     <section id="about" class="section-padding">
         <div class="container about-grid">
@@ -394,6 +418,7 @@
         </div>
     </section>
 
+<details class="ayu-panel" data-ayu-panel="projects"><summary class="ayu-panel-summary"><span class="ayu-panel-title" data-i18n="panel.projects.title">Projectos e galeria</span><span class="ayu-panel-subtitle" data-i18n="panel.projects.sub">Sistemas, soluções técnicas e exemplos visuais</span><span class="ayu-panel-arrow" aria-hidden="true"></span></summary>
     <!-- PROJECTS / SOLUTIONS SHOWCASE -->
     <section id="projects" class="section-padding">
         <div class="container">
@@ -585,6 +610,8 @@
         </div>
     </div>
 
+</details>
+<details class="ayu-panel" data-ayu-panel="academic"><summary class="ayu-panel-summary"><span class="ayu-panel-title" data-i18n="panel.academic.title">Apoio académico</span><span class="ayu-panel-subtitle" data-i18n="panel.academic.sub">Estruturação, revisão e documentos</span><span class="ayu-panel-arrow" aria-hidden="true"></span></summary>
     <!-- ACADEMIC SECTION -->
     <section id="academic" class="section-padding">
         <div class="container academic-layout">
@@ -610,6 +637,8 @@
         </div>
     </section>
 
+</details>
+<details class="ayu-panel" data-ayu-panel="process"><summary class="ayu-panel-summary"><span class="ayu-panel-title" data-i18n="panel.process.title">Como trabalhamos</span><span class="ayu-panel-subtitle" data-i18n="panel.process.sub">O nosso processo e acompanhamento</span><span class="ayu-panel-arrow" aria-hidden="true"></span></summary>
     <!-- PROCESS & WHY US SECTION -->
     <section id="process" class="section-padding" style="background: var(--bg-dark);">
         <div class="container">
@@ -652,6 +681,8 @@
         </div>
     </section>
 
+</details>
+<details class="ayu-panel" data-ayu-panel="faq"><summary class="ayu-panel-summary"><span class="ayu-panel-title" data-i18n="panel.faq.title">Perguntas frequentes</span><span class="ayu-panel-subtitle" data-i18n="panel.faq.sub">Orçamentos, atendimento e outras dúvidas</span><span class="ayu-panel-arrow" aria-hidden="true"></span></summary>
     <!-- FAQ SECTION -->
     <section id="faq" class="section-padding">
         <div class="container">
@@ -686,6 +717,7 @@
         </div>
     </section>
 
+</details>
     <!-- GUIDES: original practical information, no extra requests or images -->
     <section id="guides" class="section-padding" aria-labelledby="guides-title">
       <div class="container">

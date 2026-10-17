@@ -21,6 +21,18 @@
                 "nav.contact": "Contactos",
                 "nav.cta": "Iniciar um Projecto",
                 "nav.install": "Instalar App",
+                "quick.explore": "Explorar",
+                "quick.details": "Detalhes",
+                "panel.services.title": "Todos os serviços em detalhe",
+                "panel.services.sub": "7 especialidades de informática e soluções digitais",
+                "panel.projects.title": "Projectos e galeria",
+                "panel.projects.sub": "Sistemas, soluções técnicas e exemplos visuais",
+                "panel.academic.title": "Apoio académico",
+                "panel.academic.sub": "Estruturação, revisão e documentos",
+                "panel.process.title": "Como trabalhamos",
+                "panel.process.sub": "O nosso processo e acompanhamento",
+                "panel.faq.title": "Perguntas frequentes",
+                "panel.faq.sub": "Orçamentos, atendimento e outras dúvidas",
                 
                 "hero.title": "TECNOLOGIA QUE RESOLVE PROBLEMAS REAIS.",
                 "hero.subtitle": "Soluções profissionais em informática, desenvolvimento digital, equipamentos, redes, segurança e apoio académico.",
@@ -282,6 +294,18 @@
                 "nav.contact": "Contact",
                 "nav.cta": "Start a Project",
                 "nav.install": "Install App",
+                "quick.explore": "Explore",
+                "quick.details": "Details",
+                "panel.services.title": "All services in detail",
+                "panel.services.sub": "7 specialties in IT and digital solutions",
+                "panel.projects.title": "Projects and gallery",
+                "panel.projects.sub": "Systems, technical services and visual examples",
+                "panel.academic.title": "Academic support",
+                "panel.academic.sub": "Structuring, reviews and documents",
+                "panel.process.title": "How we work",
+                "panel.process.sub": "Our process and ongoing support",
+                "panel.faq.title": "Frequently asked questions",
+                "panel.faq.sub": "Quotes, service and helpful answers",
                 
                 "hero.title": "TECHNOLOGY THAT SOLVES REAL PROBLEMS.",
                 "hero.subtitle": "Professional solutions in IT, digital development, equipment, networking, security and academic support.",
@@ -1073,3 +1097,26 @@ Descrição: ${description || '-'}`;
             });
         }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
+
+/* AYU: links para subseccoes expansíveis e menu acessível */
+(() => {
+ function expand(hash,jump=false){
+  if(!hash || hash.charAt(0)!=='#' || hash.length<2)return;
+  let el;try{el=document.getElementById(decodeURIComponent(hash.slice(1)));}catch(_){return;}
+  if(!el)return;
+  const box=el.closest('details.ayu-panel');
+  if(box)box.open=true;
+  if(jump)requestAnimationFrame(()=>el.scrollIntoView({block:'start',behavior:'auto'}));
+ }
+ document.addEventListener('click',event=>{
+  const a=event.target.closest?.('a[href^="#"]');
+  if(a)expand(a.getAttribute('href'));
+ },true);
+ window.addEventListener('hashchange',()=>expand(location.hash,true));
+ if(location.hash)expand(location.hash,true);
+ document.addEventListener('keydown',event=>{
+  if(event.key!=='Escape')return;
+  const nav=document.getElementById('nav-menu'),button=document.getElementById('hamburger-btn');
+  if(nav?.classList.contains('active')&&button){button.click();button.focus();}
+ });
+})();
