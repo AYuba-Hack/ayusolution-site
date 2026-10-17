@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+<title id="t">Ayusolution — CONECTIVIDADE</title><desc id="d">Ilustração de serviço Ayusolution</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#111827"/></linearGradient>
+ <radialGradient id="glow" cx="75%" cy="25%" r="55%"><stop stop-color="#2563eb" stop-opacity=".52"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="760" rx="44" fill="url(#bg)"/>
+<rect width="1200" height="760" rx="44" fill="url(#glow)"/>
+<g opacity=".13" stroke="#93c5fd" fill="none"><path d="M80 120h310M80 180h230M820 590h300M900 530h220"/><circle cx="1010" cy="150" r="90"/><circle cx="1010" cy="150" r="130"/></g>
+<rect x="78" y="76" width="150" height="34" rx="17" fill="#2563eb" opacity=".2"/><text x="153" y="99" text-anchor="middle" fill="#93c5fd" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">REDES</text>
+<text x="78" y="610" fill="#fff" font-family="Arial,sans-serif" font-size="54" font-weight="700">CONECTIVIDADE</text>
+<text x="78" y="660" fill="#94a3b8" font-family="Arial,sans-serif" font-size="24">AYUSOLUTION · Quelimane, Moçambique</text>
+<g transform="translate(720 220)"><rect width="330" height="230" rx="36" fill="#0b1220" stroke="#2563eb" stroke-width="3"/><rect x="28" y="28" width="274" height="174" rx="24" fill="#111c30"/><text x="165" y="139" text-anchor="middle" fill="#60a5fa" font-family="Arial,sans-serif" font-size="62" font-weight="700">LAN</text></g>
+<path d="M720 485h330" stroke="#2563eb" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+<circle cx="78" cy="704" r="8" fill="#22c55e"/><text x="99" y="712" fill="#cbd5e1" font-family="Arial,sans-serif" font-size="19">Tecnologia que resolve problemas reais.</text>
+</svg>

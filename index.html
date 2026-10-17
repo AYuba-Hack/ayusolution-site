@@ -1,0 +1,2793 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- AYUSOLUTION META & SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayusolution — Soluções Tecnológicas e Digitais</title>
+    <meta name="description" content="Ayusolution oferece soluções profissionais em informática, reparação de computadores, impressoras, redes, CCTV, desenvolvimento web, sistemas de gestão e apoio académico.">
+    <meta name="keywords" content="informática, reparação de computadores, impressoras, redes, CCTV, desenvolvimento web, sistemas de gestão, soluções digitais, serviços tecnológicos, trabalhos científicos, monografias, Moçambique">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ayusolution — Technology & Digital Solutions">
+    <meta property="og:description" content="Professional solutions in IT, digital development, equipment, networking, security and academic support.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://ayusolution.com/">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#05070D" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+    <meta property="og:url" content="https://ayusolution.com/">
+    <meta property="og:site_name" content="Ayusolution">
+    <meta property="og:locale" content="pt_MZ">
+    <meta property="og:image" content="https://ayusolution.com/assets/images/og-ayusolution.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ayusolution — Soluções Tecnológicas e Digitais em Quelimane, Moçambique">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ayusolution — Soluções Tecnológicas e Digitais">
+    <meta name="twitter:description" content="Informática, websites, sistemas, redes, CCTV, equipamentos e apoio académico em Quelimane, Moçambique.">
+    <meta name="twitter:image" content="https://ayusolution.com/assets/images/og-ayusolution.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Ayusolution",
+      "url": "https://ayusolution.com/",
+      "image": "https://ayusolution.com/assets/images/og-ayusolution.png",
+      "description": "Soluções tecnológicas e digitais em informática, desenvolvimento web, sistemas, redes, CCTV, equipamentos e apoio académico.",
+      "telephone": ["+258870197738", "+258858425837"],
+      "areaServed": {
+        "@type": "City",
+        "name": "Quelimane"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Quelimane",
+        "addressCountry": "MZ"
+      },
+      "sameAs": []
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2L30 28H22L16 14L10 28H2L16 2Z' fill='%232563EB'/%3E%3Cpath d='M16 18L22 28H10L16 18Z' fill='%23FFFFFF'/%3E%3C/svg%3E">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Theme bootstrap: applies saved/system theme before the page paints -->
+    <script>
+        (() => {
+            const savedTheme = localStorage.getItem('ayusolution-theme');
+            const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme || preferredTheme);
+        })();
+    </script>
+
+    <style>
+        /* ========================================
+           AYUSOLUTION CSS 
+           1. ROOT VARIABLES & RESET
+           2. TYPOGRAPHY
+           3. LAYOUT & UTILITIES
+           4. HEADER & NAVIGATION
+           5. HERO SECTION
+           6. SERVICES SECTION
+           7. ABOUT & FOUNDER
+           8. PROJECTS SECTION
+           9. ACADEMIC SECTION
+           10. PROCESS & WHY US
+           11. CONTACT FORM
+           12. FOOTER
+           13. RESPONSIVE MEDIA QUERIES
+        ======================================== */
+
+        :root {
+            --bg-dark: #05070D;
+            --bg-surface: #0D1320;
+            --bg-card: #121826;
+            --color-primary: #2563EB;
+            --color-primary-hover: #1D4ED8;
+            --color-text: #FFFFFF;
+            --color-text-muted: #94A3B8;
+            --color-border: rgba(255, 255, 255, 0.08);
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --radius: 4px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* LIGHT / DARK THEME */
+        :root {
+            color-scheme: dark;
+            --header-bg: rgba(5, 7, 13, 0.80);
+            --header-bg-scrolled: rgba(5, 7, 13, 0.95);
+            --overlay-bg: rgba(13, 19, 32, 0.88);
+            --tag-bg: rgba(5, 7, 13, 0.82);
+            --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.22);
+            --logo-inner: #FFFFFF;
+        }
+
+        html[data-theme="light"] {
+            color-scheme: light;
+            --bg-dark: #F8FAFC;
+            --bg-surface: #EEF3F9;
+            --bg-card: #FFFFFF;
+            --color-primary: #2563EB;
+            --color-primary-hover: #1D4ED8;
+            --color-text: #0F172A;
+            --color-text-muted: #5B677A;
+            --color-border: rgba(15, 23, 42, 0.12);
+            --header-bg: rgba(248, 250, 252, 0.84);
+            --header-bg-scrolled: rgba(248, 250, 252, 0.96);
+            --overlay-bg: rgba(255, 255, 255, 0.90);
+            --tag-bg: rgba(255, 255, 255, 0.90);
+            --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.10);
+            --logo-inner: #FFFFFF;
+        }
+
+        body,
+        header,
+        .tech-card,
+        .project-card,
+        .why-card,
+        .contact-form,
+        .theme-toggle,
+        .popular-card,
+        .tech-chip,
+        .faq-item {
+            transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+        }
+
+        header { background: var(--header-bg); }
+        header.scrolled { background: var(--header-bg-scrolled); }
+        .hamburger { color: var(--color-text); }
+        .hero-tech-overlay { background: var(--overlay-bg); }
+        .project-tag { background: var(--tag-bg); color: var(--color-text); }
+        .form-group input, .form-group select, .form-group textarea { color: var(--color-text); }
+        .logo svg path:last-child { fill: var(--logo-inner); }
+
+        html[data-theme="light"] .project-img > div {
+            background: linear-gradient(135deg, #E8EEF7 0%, #DCE6F3 100%) !important;
+        }
+
+        /* PAGE PROGRESS */
+        .scroll-progress {
+            position: fixed;
+            inset: 0 auto auto 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary), #60A5FA);
+            z-index: 2000;
+            pointer-events: none;
+        }
+
+        /* THEME BUTTON */
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--color-border);
+            border-radius: 50%;
+            background: var(--bg-card);
+            color: var(--color-text);
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .theme-toggle:hover {
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        /* HERO PERSONALIZATION */
+        .hero-location {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            padding: 8px 12px;
+            border: 1px solid var(--color-border);
+            border-radius: 999px;
+            color: var(--color-text-muted);
+            background: var(--bg-card);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .hero-location i { color: var(--color-primary); }
+
+        .hero-rotator {
+            min-height: 32px;
+            margin: -18px 0 34px;
+            color: var(--color-primary);
+            font-family: var(--font-heading);
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: .02em;
+        }
+
+        .hero-rotator .rotating-service {
+            display: inline-block;
+            transition: opacity .25s ease, transform .25s ease;
+        }
+
+        .hero-rotator .rotating-service.is-changing {
+            opacity: 0;
+            transform: translateY(6px);
+        }
+
+        /* POPULAR SERVICES */
+        #popular-services {
+            padding: 0 0 100px;
+            background: var(--bg-dark);
+        }
+
+        .popular-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .popular-card {
+            position: relative;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .popular-card::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            right: -55px;
+            top: -55px;
+            background: color-mix(in srgb, var(--color-primary) 16%, transparent);
+        }
+
+        .popular-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--color-primary);
+        }
+
+        .popular-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+            color: var(--color-primary);
+            font-size: 20px;
+        }
+
+        .popular-card h3 { font-size: 22px; margin-bottom: 10px; }
+        .popular-card p { color: var(--color-text-muted); font-size: 14px; margin-bottom: 22px; }
+
+        .text-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            border: 0;
+            background: none;
+            font-family: var(--font-body);
+        }
+        .text-link:hover { gap: 12px; }
+
+        /* TECHNOLOGY STRIP */
+        .tech-strip {
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            background: var(--bg-surface);
+            padding: 24px 0;
+        }
+
+        .tech-strip-inner {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tech-strip-label {
+            color: var(--color-text-muted);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-right: 8px;
+        }
+
+        .tech-chip {
+            border: 1px solid var(--color-border);
+            background: var(--bg-card);
+            color: var(--color-text-muted);
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .tech-chip:hover { color: var(--color-primary); border-color: var(--color-primary); }
+
+        /* FAQ */
+        #faq { background: var(--bg-dark); }
+        .faq-list { max-width: 850px; }
+        .faq-item {
+            border: 1px solid var(--color-border);
+            background: var(--bg-card);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-item summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 20px 22px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after {
+            content: '+';
+            color: var(--color-primary);
+            font-size: 22px;
+            font-weight: 400;
+        }
+        .faq-item[open] summary::after { content: '–'; }
+        .faq-item p {
+            padding: 0 22px 22px;
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+
+        /* PROJECT DETAILS MODAL */
+        .project-card { position: relative; }
+        .project-card:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; }
+        .project-more {
+            display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;
+            color: var(--color-primary); font-size: 13px; font-weight: 700;
+        }
+        .project-card:hover .project-more { gap: 12px; }
+        .project-modal {
+            position: fixed; inset: 0; z-index: 3000; display: none;
+            align-items: center; justify-content: center; padding: 24px;
+            background: rgba(2, 6, 23, .78); backdrop-filter: blur(10px);
+        }
+        .project-modal.open { display: flex; }
+        .project-modal-dialog {
+            width: min(760px, 100%); max-height: min(820px, 92vh); overflow-y: auto;
+            background: var(--bg-card); color: var(--color-text); border: 1px solid var(--color-border);
+            border-radius: 18px; box-shadow: 0 30px 90px rgba(0,0,0,.38);
+        }
+        .project-modal-visual {
+            min-height: 240px; display: grid; place-items: center; position: relative; overflow: hidden;
+            background: radial-gradient(circle at 70% 20%, rgba(37,99,235,.35), transparent 45%), linear-gradient(135deg,#07111f,#111827);
+            border-radius: 18px 18px 0 0;
+        }
+        .project-modal-visual i { font-size: 70px; color: #60A5FA; }
+        .project-modal-close {
+            position: absolute; top: 16px; right: 16px; width: 42px; height: 42px;
+            border: 1px solid rgba(255,255,255,.16); border-radius: 50%;
+            background: rgba(5,7,13,.72); color: #fff; cursor: pointer; font-size: 18px;
+        }
+        .project-modal-content { padding: 30px; }
+        .project-modal-kicker {
+            display: inline-flex; padding: 6px 10px; border-radius: 999px;
+            background: rgba(37,99,235,.12); color: var(--color-primary);
+            font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .project-modal-content h3 { font-size: clamp(26px, 5vw, 38px); margin-bottom: 14px; }
+        .project-modal-summary { color: var(--color-text-muted); margin-bottom: 24px; font-size: 16px; }
+        .project-modal-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 26px;
+        }
+        .project-modal-block {
+            padding: 18px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--bg-dark);
+        }
+        .project-modal-block strong { display: block; margin-bottom: 8px; font-family: var(--font-heading); }
+        .project-modal-block p { color: var(--color-text-muted); font-size: 14px; }
+        .project-modal-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        body.modal-open { overflow: hidden; }
+
+        /* SERVICE GALLERY */
+        #gallery { background: var(--bg-dark); }
+        .gallery-head {
+            display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 36px;
+        }
+        .gallery-note { max-width: 420px; color: var(--color-text-muted); font-size: 13px; }
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px;
+        }
+        .gallery-card {
+            grid-column: span 4; position: relative; min-height: 300px; overflow: hidden;
+            border: 1px solid var(--color-border); border-radius: 16px; background: var(--bg-card);
+        }
+        .gallery-card:nth-child(1), .gallery-card:nth-child(4) { grid-column: span 8; }
+        .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+        .gallery-card:hover img { transform: scale(1.035); }
+        .gallery-caption {
+            position: absolute; inset: auto 16px 16px 16px; padding: 14px 16px;
+            border: 1px solid rgba(255,255,255,.12); border-radius: 12px;
+            background: rgba(5,7,13,.76); color: #fff; backdrop-filter: blur(8px);
+        }
+        .gallery-caption strong { display: block; font-family: var(--font-heading); margin-bottom: 3px; }
+        .gallery-caption span { font-size: 12px; color: #CBD5E1; }
+
+        /* MOBILE ACTION BAR */
+        .mobile-action-bar { display: none; }
+
+        /* IMAGE FALLBACKS */
+        .service-visual img, .hero-img-wrapper img, .founder-img img, .academic-visual img { background: var(--bg-card); }
+
+        /* BACK TO TOP */
+        .back-to-top {
+            position: fixed;
+            right: 30px;
+            bottom: 102px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 1px solid var(--color-border);
+            background: var(--bg-card);
+            color: var(--color-text);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            box-shadow: var(--shadow-soft);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover { color: var(--color-primary); border-color: var(--color-primary); }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--color-text);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: var(--color-primary);
+            color: #fff;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-radius: var(--radius);
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-text);
+            border-color: var(--color-border);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .section-padding {
+            padding: 120px 0;
+        }
+
+        .section-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .section-heading {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 60px;
+            max-width: 800px;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            background: rgba(5, 7, 13, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+            background: rgba(5, 7, 13, 0.95);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .logo svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-text-muted);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--color-text);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-heading);
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .lang-switcher span {
+            color: var(--color-text-muted);
+            padding: 2px;
+            transition: var(--transition);
+        }
+
+        .lang-switcher span:hover {
+            color: var(--color-text);
+        }
+
+        .lang-switcher span.active {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* HERO SECTION */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(40px, 6vw, 72px);
+            margin-bottom: 24px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--color-text-muted);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 600px;
+        }
+
+        .hero-img-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .hero-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-tech-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(13, 19, 32, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--color-border);
+            padding: 16px 24px;
+            border-radius: var(--radius);
+            font-family: var(--font-heading);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #10B981;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        /* SERVICES SECTION */
+        #services {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .service-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 120px;
+            align-items: center;
+        }
+
+        .service-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-row.reverse .service-content {
+            order: 2;
+        }
+
+        .service-content .service-num {
+            font-family: var(--font-heading);
+            color: var(--color-primary);
+            font-size: 14px;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .service-content h3 {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        .service-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+
+        .service-list li i {
+            color: var(--color-primary);
+            font-size: 12px;
+        }
+
+        .service-visual {
+            height: 450px;
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .service-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tech-card {
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            padding: 24px;
+            border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .tech-icon {
+            font-size: 32px;
+            color: var(--color-primary);
+            margin-bottom: 24px;
+        }
+
+        /* ABOUT SECTION */
+        #about {
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .founder-img {
+            position: relative;
+            height: 500px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .founder-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%);
+        }
+
+        .about-text h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            margin-bottom: 32px;
+        }
+
+        .about-text p {
+            color: var(--color-text-muted);
+            font-size: 18px;
+            margin-bottom: 32px;
+        }
+
+        .founder-subtitle {
+            border-left: 2px solid var(--color-primary);
+            padding-left: 24px;
+            margin-top: 60px;
+        }
+
+        /* PROJECTS SECTION */
+        #projects {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--color-primary);
+        }
+
+        .project-img {
+            height: 220px;
+            background: #1E293B;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-img img {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .project-tag {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(5, 7, 13, 0.8);
+            padding: 4px 12px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            border: 1px solid var(--color-border);
+        }
+
+        .project-info {
+            padding: 24px;
+        }
+
+        .project-info h4 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .project-info p {
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+
+        /* ACADEMIC SECTION */
+        #academic {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .academic-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .academic-visual {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            border: 1px solid var(--color-border);
+            transition: var(--transition);
+        }
+
+        .academic-visual:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+        }
+
+        .academic-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .academic-content h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 24px;
+        }
+
+        .academic-list {
+            grid-template-columns: 1fr;
+            margin-bottom: 32px;
+        }
+
+        /* PROCESS & WHY US */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .process-card {
+            border-top: 1px solid var(--color-border);
+            padding-top: 24px;
+        }
+
+        .process-num {
+            font-family: var(--font-heading);
+            font-size: 14px;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .process-card h4 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .process-card p {
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .why-card {
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            padding: 32px;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            border-color: var(--color-primary);
+        }
+
+        /* CONTACT SECTION */
+        #contact {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-left h2 {
+            font-size: clamp(36px, 5vw, 56px);
+            margin-bottom: 24px;
+        }
+
+        .contact-left p {
+            color: var(--color-text-muted);
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #25D366;
+            color: #111;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5a;
+            transform: translateY(-2px);
+        }
+
+        .contact-form {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--radius);
+            border: 1px solid var(--color-border);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-text-muted);
+            margin-bottom: 8px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            background: var(--bg-dark);
+            border: 1px solid var(--color-border);
+            padding: 12px 16px;
+            color: #fff;
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .form-feedback {
+            display: none;
+            padding: 12px;
+            border-radius: var(--radius);
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .form-feedback.success {
+            display: block;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10B981;
+            border: 1px solid #10B981;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--bg-dark);
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-desc {
+            color: var(--color-text-muted);
+            margin: 20px 0;
+            max-width: 300px;
+        }
+
+        .footer-col h5 {
+            font-family: var(--font-heading);
+            margin-bottom: 24px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--color-border);
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--color-text-muted);
+        }
+
+        /* WHATSAPP FLOATING BUTTON */
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: #111;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            z-index: 999;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            transition: var(--transition);
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
+            background: #1ebe5a;
+        }
+
+        /* ANIMATIONS */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* FINAL THEME OVERRIDES — kept after base component rules */
+        header { background: var(--header-bg); }
+        header.scrolled { background: var(--header-bg-scrolled); }
+        .hamburger { color: var(--color-text); }
+        .hero-tech-overlay { background: var(--overlay-bg); color: var(--color-text); }
+        .project-tag { background: var(--tag-bg); color: var(--color-text); }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            color: var(--color-text);
+            background: var(--bg-dark);
+        }
+        .form-group select option {
+            color: var(--color-text);
+            background: var(--bg-card);
+        }
+        html[data-theme="light"] .academic-visual {
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 1024px) {
+            .hero-grid, .service-row, .about-grid, .academic-layout, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .service-row.reverse .service-content {
+                order: 0;
+            }
+            .hero-visual {
+                height: 400px;
+            }
+            .founder-img {
+                height: 400px;
+            }
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process-grid, .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .academic-visual {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 80px 0;
+            }
+            .nav-links, .nav-actions .btn {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--bg-dark);
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                z-index: 999;
+            }
+            
+            .service-list, .academic-list {
+                grid-template-columns: 1fr;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .process-grid, .why-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+            }
+        }
+
+
+        @media (max-width: 1024px) {
+            .popular-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-actions { gap: 12px; }
+            .lang-switcher { gap: 5px; }
+            .popular-grid { grid-template-columns: 1fr; }
+            #popular-services { padding-bottom: 70px; }
+            .hero-rotator { margin-top: -16px; }
+            .back-to-top { right: 20px; bottom: 92px; }
+            .wa-float { right: 20px; bottom: 22px; }
+        }
+
+        @media (max-width: 480px) {
+            .theme-toggle { width: 38px; height: 38px; }
+            .hero-location { font-size: 12px; }
+            .tech-strip-inner { gap: 8px; }
+            .tech-strip-label { width: 100%; margin-bottom: 4px; }
+        }
+
+        @media (max-width: 900px) {
+            .gallery-card, .gallery-card:nth-child(1), .gallery-card:nth-child(4) { grid-column: span 6; }
+            .project-modal-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            body { padding-bottom: 72px; }
+            .gallery-head { align-items: flex-start; flex-direction: column; }
+            .gallery-card, .gallery-card:nth-child(1), .gallery-card:nth-child(4) { grid-column: 1 / -1; min-height: 250px; }
+            .mobile-action-bar {
+                position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 1600;
+                display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px;
+                background: color-mix(in srgb, var(--bg-card) 90%, transparent);
+                border: 1px solid var(--color-border); border-radius: 16px;
+                box-shadow: 0 18px 45px rgba(0,0,0,.22); backdrop-filter: blur(14px);
+            }
+            .mobile-action-bar a {
+                min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px;
+                border-radius: 11px; font-size: 13px; font-weight: 700;
+            }
+            .mobile-action-bar .mobile-wa { background: #25D366; color: #08130c; }
+            .mobile-action-bar .mobile-quote { background: var(--color-primary); color: #fff; }
+            .wa-float { display: none; }
+            .back-to-top { bottom: 88px; }
+            .project-modal { padding: 10px; }
+            .project-modal-content { padding: 22px; }
+            .project-modal-actions .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- AYUSOLUTION HEADER -->
+    <header id="header">
+        <div class="container nav-wrapper">
+            <a href="#home" class="logo">
+                <svg viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L30 28H22L16 14L10 28H2L16 2Z" fill="#2563EB"/>
+                    <path d="M16 18L22 28H10L16 18Z" fill="#FFFFFF"/>
+                </svg>
+                AYUSOLUTION
+            </a>
+            
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#home" class="active" data-i18n="nav.home">Início</a></li>
+                <li><a href="#services" data-i18n="nav.services">Serviços</a></li>
+                <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
+                <li><a href="#academic" data-i18n="nav.academic">Académico</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contactos</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <span id="lang-pt" class="active" onclick="setLanguage('pt')">PT</span>
+                    <span style="color: var(--color-border)">|</span>
+                    <span id="lang-en" onclick="setLanguage('en')">EN</span>
+                </div>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema" title="Alternar tema">
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">Iniciar um Projeto</a>
+                <button class="hamburger" id="hamburger-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="section-padding">
+        <div class="container hero-grid">
+            <div class="hero-text reveal">
+                <div class="hero-location"><i class="fas fa-location-dot"></i><span data-i18n="hero.location">Quelimane, Moçambique · Atendimento presencial e remoto</span></div>
+                <h1 data-i18n="hero.title">TECNOLOGIA QUE RESOLVE PROBLEMAS REAIS.</h1>
+                <p data-i18n="hero.subtitle">Soluções profissionais em informática, desenvolvimento digital, equipamentos, redes, segurança e apoio académico.</p>
+                <div class="hero-rotator"><span data-i18n="hero.specialty">Especialidades:</span> <span class="rotating-service" id="rotatingService">Websites & Sistemas</span></div>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary" data-i18n="hero.btn1">Conhecer os nossos serviços</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="hero.btn2">Falar connosco</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="hero-img-wrapper">
+                    <img src="https://z-cdn-media.chatglm.cn/files/b16bfc1a-75f3-4169-9d44-5c502397004c.png?auth_key=1887152872-9699266eeca841b2845135e899499f45-0-a994971b209340276bd41045d5e52357" alt="Técnico da Ayusolution a reparar computador no escritório" loading="eager" onerror="this.onerror=null;this.src='assets/images/computer-service.svg'">
+                </div>
+                <div class="hero-tech-overlay">
+                    <div class="pulse-dot"></div>
+                    <span data-i18n="hero.status">Sistemas Operacionais</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POPULAR SERVICES -->
+    <section id="popular-services">
+        <div class="container">
+            <span class="section-title reveal" data-i18n="popular.title">SERVIÇOS MAIS PROCURADOS</span>
+            <h2 class="section-heading reveal" data-i18n="popular.heading">Comece rapidamente pelo serviço que precisa.</h2>
+            <div class="popular-grid">
+                <article class="popular-card reveal">
+                    <div class="popular-icon"><i class="fas fa-laptop-medical"></i></div>
+                    <h3 data-i18n="popular.p1.title">Reparação de computadores</h3>
+                    <p data-i18n="popular.p1.desc">Diagnóstico, manutenção, formatação, Windows, drivers, RAM e SSD.</p>
+                    <button class="text-link" type="button" data-service-key="services.s1.title" onclick="requestService(this.dataset.serviceKey)"><span data-i18n="popular.cta">Pedir orçamento</span><i class="fas fa-arrow-right"></i></button>
+                </article>
+                <article class="popular-card reveal">
+                    <div class="popular-icon"><i class="fas fa-code"></i></div>
+                    <h3 data-i18n="popular.p2.title">Criação de websites</h3>
+                    <p data-i18n="popular.p2.desc">Websites empresariais, pessoais, landing pages, portfólios e sistemas web.</p>
+                    <button class="text-link" type="button" data-service-key="services.s5.title" onclick="requestService(this.dataset.serviceKey)"><span data-i18n="popular.cta">Pedir orçamento</span><i class="fas fa-arrow-right"></i></button>
+                </article>
+                <article class="popular-card reveal">
+                    <div class="popular-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 data-i18n="popular.p3.title">Apoio académico</h3>
+                    <p data-i18n="popular.p3.desc">Estruturação, revisão, formatação, referências e preparação de apresentações.</p>
+                    <button class="text-link" type="button" data-service-key="academic.title" onclick="requestService(this.dataset.serviceKey)"><span data-i18n="popular.cta">Pedir orçamento</span><i class="fas fa-arrow-right"></i></button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <div class="tech-strip">
+        <div class="container tech-strip-inner">
+            <span class="tech-strip-label" data-i18n="tech.label">Tecnologias & áreas</span>
+            <span class="tech-chip">HTML</span>
+            <span class="tech-chip">CSS</span>
+            <span class="tech-chip">JavaScript</span>
+            <span class="tech-chip">PHP</span>
+            <span class="tech-chip">MySQL</span>
+            <span class="tech-chip">Windows</span>
+            <span class="tech-chip">Wi-Fi / LAN</span>
+            <span class="tech-chip">CCTV</span>
+        </div>
+    </div>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <span class="section-title reveal" data-i18n="services.title">O QUE FAZEMOS</span>
+            <h2 class="section-heading reveal" data-i18n="services.heading">Soluções tecnológicas completas para impulsionar o seu dia a dia.</h2>
+
+            <!-- Service 01: Computer & IT -->
+            <div class="service-row reveal">
+                <div class="service-content">
+                    <span class="service-num">01 — Informática</span>
+                    <h3 data-i18n="services.s1.title">INFORMÁTICA E MANUTENÇÃO</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i1">Reparação de computadores</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i2">Diagnóstico de problemas</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i3">Manutenção de computadores</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i4">Formatação</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i5">Instalação do Windows</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i6">Configuração do Windows</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i7">Instalação de software</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i8">Instalação de drivers</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i9">Otimização do sistema</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i10">Upgrade de RAM</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i11">Upgrade de SSD</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i12">Configuração de computadores</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s1.i13">Manutenção preventiva</span></li>
+                    </ul>
+                </div>
+                <div class="service-visual">
+                    <img src="https://z-cdn-media.chatglm.cn/files/77bc56aa-d8fc-4bda-b50e-e58af221d0a1.png?auth_key=1887152872-c841df3352cc4e9eb6272a71961e5722-0-bed47805cfaf4956f2dcbb58f52895b3" alt="Reparação e manutenção de computador" loading="lazy" onerror="this.onerror=null;this.src='assets/images/computer-service.svg'">
+                </div>
+            </div>
+
+            <!-- Service 02: Printers -->
+            <div class="service-row reverse reveal">
+                <div class="service-content">
+                    <span class="service-num">02 — Equipamentos</span>
+                    <h3 data-i18n="services.s2.title">IMPRESSORAS E EQUIPAMENTOS</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i1">Instalação de impressoras</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i2">Configuração de impressoras</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i3">Manutenção de impressoras</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i4">Diagnóstico de problemas</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i5">Instalação de drivers</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i6">Configuração em rede</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i7">Configuração de scanners</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i8">Configuração de equipamentos</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s2.i9">Manutenção de equipamentos</span></li>
+                    </ul>
+                </div>
+                <div class="service-visual">
+                    <img src="https://z-cdn-media.chatglm.cn/files/3457a019-613c-44c6-a194-d43d797a671f.png?auth_key=1887152872-f90788740fb54a489dda91e4c4657181-0-636a16e3f0dfe190e30a48fb9521aa3d" alt="Manutenção de impressora profissional" loading="lazy" onerror="this.onerror=null;this.src='assets/images/printer-service.svg'">
+                </div>
+            </div>
+
+            <!-- Service 03 & 04: Networks & CCTV -->
+            <div class="service-row reveal" style="margin-bottom: 60px;">
+                <div class="tech-card">
+                    <i class="fas fa-network-wired tech-icon"></i>
+                    <span class="service-num">03 — Redes</span>
+                    <h3 data-i18n="services.s3.title">REDES E CONECTIVIDADE</h3>
+                    <ul class="service-list" style="grid-template-columns: 1fr;">
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s3.i1">Instalação de redes Wi-Fi</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s3.i2">Configuração de routers</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s3.i3">Redes LAN</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s3.i4">Resolução de conectividade</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s3.i5">Partilha de recursos</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s3.i6">Configuração básica de servidores</span></li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-shield-halved tech-icon"></i>
+                    <span class="service-num">04 — Segurança</span>
+                    <h3 data-i18n="services.s4.title">CCTV E SEGURANÇA</h3>
+                    <ul class="service-list" style="grid-template-columns: 1fr;">
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s4.i1">Instalação de câmeras</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s4.i2">Configuração de CCTV</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s4.i3">Configuração de DVR/NVR</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s4.i4">Acesso remoto pelo telemóvel</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s4.i5">Manutenção de sistemas</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s4.i6">Configuração de videovigilância</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 05 & 06: Web & Systems -->
+            <div class="service-row reveal" style="margin-bottom: 60px;">
+                <div class="tech-card">
+                    <i class="fas fa-code tech-icon"></i>
+                    <span class="service-num">05 — Digital</span>
+                    <h3 data-i18n="services.s5.title">DESENVOLVIMENTO WEB</h3>
+                    <ul class="service-list" style="grid-template-columns: 1fr;">
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s5.i1">Websites empresariais</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s5.i2">Websites pessoais</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s5.i3">Portfolios</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s5.i4">Landing pages</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s5.i5">Lojas online</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s5.i6">Sistemas web</span></li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-chart-line tech-icon"></i>
+                    <span class="service-num">06 — Gestão</span>
+                    <h3 data-i18n="services.s6.title">SISTEMAS DE GESTÃO</h3>
+                    <ul class="service-list" style="grid-template-columns: 1fr;">
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s6.i1">Sistemas de vendas</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s6.i2">Gestão de stock</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s6.i3">Gestão de clientes</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s6.i4">Sistemas para restaurantes</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s6.i5">Sistemas de reservas</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s6.i6">Sistemas personalizados</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 07: Digital Solutions -->
+            <div class="service-row reveal">
+                <div class="service-content">
+                    <span class="service-num">07 — Inovação</span>
+                    <h3 data-i18n="services.s7.title">SOLUÇÕES DIGITAIS</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s7.i1">Digitalização de processos</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s7.i2">Organização de informação</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s7.i3">Automatização de tarefas</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s7.i4">Bases de dados</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s7.i5">Consultoria informática</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="services.s7.i6">Soluções personalizadas</span></li>
+                    </ul>
+                </div>
+                <div class="service-visual" style="background: var(--bg-card); display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 80%; height: 2px; background: var(--color-border); position: relative;">
+                        <div style="position: absolute; top: -5px; left: 20%; width: 10px; height: 10px; background: var(--color-primary); border-radius: 50%;"></div>
+                        <div style="position: absolute; top: -5px; left: 50%; width: 10px; height: 10px; background: #fff; border-radius: 50%;"></div>
+                        <div style="position: absolute; top: -5px; left: 80%; width: 10px; height: 10px; background: var(--color-primary); border-radius: 50%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT & FOUNDER SECTION -->
+    <section id="about" class="section-padding">
+        <div class="container about-grid">
+            <div class="founder-img reveal">
+                <img src="https://z-cdn-media.chatglm.cn/files/794a9421-3c98-451c-83c9-74a45c07cf30.png?auth_key=1887152872-1e9e84a4eb3c4da2b748ddf5c47f5221-0-8e39331cb3a184fa2b66b7602cd975f7" alt="Fundador da Ayusolution a trabalhar em tecnologia" loading="lazy" onerror="this.onerror=null;this.src='assets/images/web-service.svg'">
+            </div>
+            <div class="about-text reveal">
+                <span class="section-title" data-i18n="about.title">SOBRE A AYUSOLUTION</span>
+                <h2 data-i18n="about.heading">Tecnologia com propósito.</h2>
+                <p data-i18n="about.p1">A Ayusolution é uma iniciativa dedicada à tecnologia e às soluções digitais, criada para ajudar pessoas, estudantes, profissionais e empresas a utilizar a tecnologia de forma mais simples, eficiente e prática. Atuamos no desenvolvimento de websites e sistemas, suporte informático, manutenção de computadores e impressoras, redes, CCTV, soluções digitais e apoio à produção académica e científica. O nosso objetivo é transformar necessidades reais em soluções funcionais, acessíveis e profissionais.</p>
+                
+                <div class="founder-subtitle">
+                    <h4 data-i18n="about.founder_title">QUEM ESTÁ POR TRÁS DA AYUSOLUTION</h4>
+                    <p data-i18n="about.founder_p">Por trás da Ayusolution existe uma paixão por tecnologia, desenvolvimento e resolução de problemas. Através da aprendizagem contínua e da prática, transformamos necessidades do dia a dia em soluções digitais e tecnológicas úteis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <span class="section-title reveal" data-i18n="projects.title">PROJETOS SELECIONADOS</span>
+            <h2 class="section-heading reveal" data-i18n="projects.heading">Trabalhos e conceitos desenvolvidos.</h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal" role="button" tabindex="0" data-project="p1" aria-label="Abrir detalhes do projecto">
+                    <div class="project-img">
+                        <span class="project-tag" data-i18n="projects.tag1">Demo Project</span>
+                        <div style="width:100%; height:100%; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); display:flex; align-items:center; justify-content:center;">
+                            <i class="fas fa-cash-register" style="font-size: 48px; color: #2563EB; opacity: 0.5;"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4 data-i18n="projects.p1.title">Business Management System</h4>
+                        <p data-i18n="projects.p1.desc">Sistema de gestão de vendas, stock e clientes.</p>
+                        <span class="project-more" data-i18n="projects.more">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal" role="button" tabindex="0" data-project="p2" aria-label="Abrir detalhes do projecto">
+                    <div class="project-img">
+                        <span class="project-tag" data-i18n="projects.tag1">Concept Project</span>
+                        <div style="width:100%; height:100%; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); display:flex; align-items:center; justify-content:center;">
+                            <i class="fas fa-utensils" style="font-size: 48px; color: #2563EB; opacity: 0.5;"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4 data-i18n="projects.p2.title">Restaurant Management System</h4>
+                        <p data-i18n="projects.p2.desc">Sistema de pedidos, reservas e gestão de mesa.</p>
+                        <span class="project-more" data-i18n="projects.more">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal" role="button" tabindex="0" data-project="p3" aria-label="Abrir detalhes do projecto">
+                    <div class="project-img">
+                        <span class="project-tag" data-i18n="projects.tag1">Concept Project</span>
+                        <div style="width:100%; height:100%; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); display:flex; align-items:center; justify-content:center;">
+                            <i class="fas fa-ticket-alt" style="font-size: 48px; color: #2563EB; opacity: 0.5;"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4 data-i18n="projects.p3.title">Ticket Reservation System</h4>
+                        <p data-i18n="projects.p3.desc">Plataforma web para reservas e emissão de bilhetes.</p>
+                        <span class="project-more" data-i18n="projects.more">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reveal" role="button" tabindex="0" data-project="p4" aria-label="Abrir detalhes do projecto">
+                    <div class="project-img">
+                        <span class="project-tag" data-i18n="projects.tag1">Demo Project</span>
+                        <div style="width:100%; height:100%; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); display:flex; align-items:center; justify-content:center;">
+                            <i class="fas fa-globe" style="font-size: 48px; color: #2563EB; opacity: 0.5;"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4 data-i18n="projects.p4.title">Corporate Website</h4>
+                        <p data-i18n="projects.p4.desc">Desenvolvimento de website institucional moderno.</p>
+                        <span class="project-more" data-i18n="projects.more">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card reveal" role="button" tabindex="0" data-project="p5" aria-label="Abrir detalhes do projecto">
+                    <div class="project-img">
+                        <span class="project-tag" data-i18n="projects.tag1">Concept Project</span>
+                        <div style="width:100%; height:100%; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); display:flex; align-items:center; justify-content:center;">
+                            <i class="fas fa-server" style="font-size: 48px; color: #2563EB; opacity: 0.5;"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4 data-i18n="projects.p5.title">Network Infrastructure</h4>
+                        <p data-i18n="projects.p5.desc">Implementação de rede LAN e configuração Wi-Fi.</p>
+                        <span class="project-more" data-i18n="projects.more">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card reveal" role="button" tabindex="0" data-project="p6" aria-label="Abrir detalhes do projecto">
+                    <div class="project-img">
+                        <span class="project-tag" data-i18n="projects.tag1">Demo Project</span>
+                        <div style="width:100%; height:100%; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); display:flex; align-items:center; justify-content:center;">
+                            <i class="fas fa-tools" style="font-size: 48px; color: #2563EB; opacity: 0.5;"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4 data-i18n="projects.p6.title">IT Equipment Maintenance</h4>
+                        <p data-i18n="projects.p6.desc">Manutenção preventiva e corretiva de equipamentos.</p>
+                        <span class="project-more" data-i18n="projects.more">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE GALLERY -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <div class="gallery-head">
+                <div>
+                    <span class="section-title reveal" data-i18n="gallery.title">GALERIA DE SERVIÇOS</span>
+                    <h2 class="section-heading reveal" style="margin-bottom:0" data-i18n="gallery.heading">Uma visão rápida das áreas em que actuamos.</h2>
+                </div>
+                <p class="gallery-note reveal" data-i18n="gallery.note">As imagens desta secção são ilustrativas. Quando existirem fotografias reais autorizadas dos trabalhos, podem substituir estas peças sem alterar o layout.</p>
+            </div>
+            <div class="gallery-grid">
+                <article class="gallery-card reveal"><img src="assets/images/computer-service.svg" alt="Informática e manutenção Ayusolution" loading="lazy"><div class="gallery-caption"><strong data-i18n="gallery.g1">Informática & Manutenção</strong><span data-i18n="gallery.g1s">Diagnóstico, reparação e optimização.</span></div></article>
+                <article class="gallery-card reveal"><img src="assets/images/printer-service.svg" alt="Impressoras e equipamentos Ayusolution" loading="lazy"><div class="gallery-caption"><strong data-i18n="gallery.g2">Impressoras & Equipamentos</strong><span data-i18n="gallery.g2s">Instalação, configuração e manutenção.</span></div></article>
+                <article class="gallery-card reveal"><img src="assets/images/web-service.svg" alt="Desenvolvimento web Ayusolution" loading="lazy"><div class="gallery-caption"><strong data-i18n="gallery.g3">Web & Sistemas</strong><span data-i18n="gallery.g3s">Websites, plataformas e sistemas personalizados.</span></div></article>
+                <article class="gallery-card reveal"><img src="assets/images/network-service.svg" alt="Redes e conectividade Ayusolution" loading="lazy"><div class="gallery-caption"><strong data-i18n="gallery.g4">Redes & Conectividade</strong><span data-i18n="gallery.g4s">Wi-Fi, LAN, routers e partilha de recursos.</span></div></article>
+                <article class="gallery-card reveal"><img src="assets/images/cctv-service.svg" alt="CCTV e segurança Ayusolution" loading="lazy"><div class="gallery-caption"><strong data-i18n="gallery.g5">CCTV & Segurança</strong><span data-i18n="gallery.g5s">Videovigilância e acesso remoto.</span></div></article>
+                <article class="gallery-card reveal"><img src="assets/images/academic-service.svg" alt="Apoio académico Ayusolution" loading="lazy"><div class="gallery-caption"><strong data-i18n="gallery.g6">Apoio Académico</strong><span data-i18n="gallery.g6s">Estruturação, revisão e formatação.</span></div></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT MODAL -->
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-hidden="true">
+        <div class="project-modal-dialog">
+            <div class="project-modal-visual">
+                <button type="button" class="project-modal-close" id="projectModalClose" aria-label="Fechar"><i class="fas fa-times"></i></button>
+                <i id="projectModalIcon" class="fas fa-laptop-code" aria-hidden="true"></i>
+            </div>
+            <div class="project-modal-content">
+                <span class="project-modal-kicker" id="projectModalTag">Concept Project</span>
+                <h3 id="projectModalTitle">Projecto</h3>
+                <p class="project-modal-summary" id="projectModalSummary"></p>
+                <div class="project-modal-grid">
+                    <div class="project-modal-block"><strong data-i18n="modal.challenge">Necessidade</strong><p id="projectModalChallenge"></p></div>
+                    <div class="project-modal-block"><strong data-i18n="modal.solution">Solução proposta</strong><p id="projectModalSolution"></p></div>
+                    <div class="project-modal-block"><strong data-i18n="modal.tech">Tecnologias / área</strong><p id="projectModalTech"></p></div>
+                    <div class="project-modal-block"><strong data-i18n="modal.status">Estado</strong><p id="projectModalStatus"></p></div>
+                </div>
+                <div class="project-modal-actions">
+                    <button type="button" class="btn btn-primary" id="projectModalQuote"><i class="fas fa-paper-plane"></i> <span data-i18n="modal.cta">Solicitar algo semelhante</span></button>
+                    <button type="button" class="btn btn-outline" id="projectModalDismiss" data-i18n="modal.close">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ACADEMIC SECTION -->
+    <section id="academic" class="section-padding">
+        <div class="container academic-layout">
+            <div class="academic-visual reveal">
+                <img src="https://z-cdn-media.chatglm.cn/files/27a89d6a-1f88-4cc3-b37a-5fbac51fba56.png?auth_key=1887905514-2bb6da4c2bc24ca69052b463be27b466-0-ee9b412e92ee9cadbf4f61f0e79b5f7b" alt="Serviços Académicos e Científicos Ayusolution" loading="lazy" onerror="this.onerror=null;this.src='assets/images/academic-service.svg'">
+            </div>
+            <div class="academic-content reveal">
+                <span class="section-title" data-i18n="academic.title">APOIO ACADÉMICO E CIENTÍFICO</span>
+                <h2 data-i18n="academic.heading">Apoio na estruturação e formatação de documentos académicos.</h2>
+                <ul class="service-list academic-list">
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="academic.i1">Elaboração de trabalhos científicos</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="academic.i2">Monografias</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="academic.i3">Artigos científicos</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="academic.i4">Projectos de pesquisa</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="academic.i5">Relatórios académicos</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="academic.i6">Revisão e correcção de trabalhos</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="academic.i7">Formatação académica</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="academic.i8">Referências bibliográficas</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="academic.i9">Apresentações em PowerPoint</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="academic.i10">Apoio na preparação para defesa</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS & WHY US SECTION -->
+    <section id="process" class="section-padding" style="background: var(--bg-dark);">
+        <div class="container">
+            <span class="section-title reveal" data-i18n="process.title">COMO TRABALHAMOS</span>
+            <h2 class="section-heading reveal" data-i18n="process.heading">Um processo simples e focado em resultados.</h2>
+
+            <div class="process-grid">
+                <div class="process-card reveal">
+                    <span class="process-num">01 — ENTENDER</span>
+                    <h4 data-i18n="process.p1.title">Entender</h4>
+                    <p data-i18n="process.p1.desc">Compreender as necessidades do cliente.</p>
+                </div>
+                <div class="process-card reveal">
+                    <span class="process-num">02 — PLANEJAR</span>
+                    <h4 data-i18n="process.p2.title">Planejar</h4>
+                    <p data-i18n="process.p2.desc">Definir a solução adequada.</p>
+                </div>
+                <div class="process-card reveal">
+                    <span class="process-num">03 — DESENVOLVER</span>
+                    <h4 data-i18n="process.p3.title">Desenvolver</h4>
+                    <p data-i18n="process.p3.desc">Construir, configurar ou implementar.</p>
+                </div>
+                <div class="process-card reveal">
+                    <span class="process-num">04 — ACOMPANHAR</span>
+                    <h4 data-i18n="process.p4.title">Acompanhar</h4>
+                    <p data-i18n="process.p4.desc">Fornecer suporte e melhorias.</p>
+                </div>
+            </div>
+
+            <span class="section-title reveal" style="margin-top: 80px; display:block;" data-i18n="why.title">PORQUÊ A AYUSOLUTION?</span>
+            <h2 class="section-heading reveal" data-i18n="why.heading">Razões para confiar em nós.</h2>
+
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <i class="fas fa-lightbulb tech-icon" style="margin-bottom: 16px;"></i>
+                    <h4 data-i18n="why.w1.title">Soluções práticas</h4>
+                    <p data-i18n="why.w1.desc">Tecnologia aplicada a problemas reais.</p>
+                </div>
+                <div class="why-card reveal">
+                    <i class="fas fa-headset tech-icon" style="margin-bottom: 16px;"></i>
+                    <h4 data-i18n="why.w2.title">Atendimento próximo</h4>
+                    <p data-i18n="why.w2.desc">Suporte direto e dedicado a cada cliente.</p>
+                </div>
+                <div class="why-card reveal">
+                    <i class="fas fa-universal-access tech-icon" style="margin-bottom: 16px;"></i>
+                    <h4 data-i18n="why.w3.title">Tecnologia acessível</h4>
+                    <p data-i18n="why.w3.desc">Soluções acessíveis para todos os bolsos.</p>
+                </div>
+                <div class="why-card reveal">
+                    <i class="fas fa-sliders tech-icon" style="margin-bottom: 16px;"></i>
+                    <h4 data-i18n="why.w4.title">Soluções personalizadas</h4>
+                    <p data-i18n="why.w4.desc">Adaptadas às necessidades específicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <span class="section-title reveal" data-i18n="faq.title">PERGUNTAS FREQUENTES</span>
+            <h2 class="section-heading reveal" data-i18n="faq.heading">Algumas respostas antes de começar.</h2>
+            <div class="faq-list">
+                <details class="faq-item reveal">
+                    <summary data-i18n="faq.q1">Como posso pedir um orçamento?</summary>
+                    <p data-i18n="faq.a1">Escolha um serviço no formulário ou contacte-nos pelo WhatsApp. Explique o que precisa e responderemos com a orientação adequada.</p>
+                </details>
+                <details class="faq-item reveal">
+                    <summary data-i18n="faq.q2">A Ayusolution faz atendimento remoto?</summary>
+                    <p data-i18n="faq.a2">Sim. Dependendo do serviço, o apoio pode ser feito remotamente. Serviços que exigem intervenção física são combinados directamente com o cliente.</p>
+                </details>
+                <details class="faq-item reveal">
+                    <summary data-i18n="faq.q3">Trabalham com pessoas e empresas?</summary>
+                    <p data-i18n="faq.a3">Sim. Atendemos estudantes, profissionais, pequenos negócios, organizações e clientes individuais, de acordo com cada necessidade.</p>
+                </details>
+                <details class="faq-item reveal">
+                    <summary data-i18n="faq.q4">Posso solicitar uma solução personalizada?</summary>
+                    <p data-i18n="faq.a4">Sim. Websites, sistemas, redes e outras soluções podem ser ajustados ao problema e ao contexto do cliente.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-padding">
+        <div class="container contact-grid">
+            <div class="contact-left reveal">
+                <span class="section-title" data-i18n="contact.title">TEM UM PROJETO EM MENTE?</span>
+                <h2 data-i18n="contact.heading">Fale connosco e vamos encontrar uma solução para o que precisa.</h2>
+                <p data-i18n="contact.subtitle">Estamos prontos para ajudar com tecnologia, equipamentos, redes ou apoio académico.</p>
+                
+                <a href="https://wa.me/258870197738" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> <span data-i18n="contact.wa">Falar pelo WhatsApp</span>
+                </a>
+                <br>
+                <a href="tel:+258858425837" class="btn btn-outline" style="margin-bottom: 8px;">
+                    <i class="fas fa-phone"></i> +258 858425837
+                </a>
+            </div>
+
+            <div class="contact-form reveal">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label data-i18n="contact.form.name">Nome</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="contact.form.email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="contact.form.phone">Telefone / WhatsApp</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="contact.form.service">Serviço</label>
+                        <select id="service" required>
+                            <option value="" data-i18n="contact.form.select">Selecione um serviço</option>
+                            <option data-i18n="services.s1.title">INFORMÁTICA E MANUTENÇÃO</option>
+                            <option data-i18n="services.s2.title">IMPRESSORAS E EQUIPAMENTOS</option>
+                            <option data-i18n="services.s3.title">REDES E CONECTIVIDADE</option>
+                            <option data-i18n="services.s4.title">CCTV E SEGURANÇA</option>
+                            <option data-i18n="services.s5.title">DESENVOLVIMENTO WEB</option>
+                            <option data-i18n="services.s6.title">SISTEMAS DE GESTÃO</option>
+                            <option data-i18n="academic.title">APOIO ACADÉMICO E CIENTÍFICO</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="contact.form.message">Mensagem</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitBtn" data-i18n="contact.form.btn">Enviar pedido</button>
+                    <div class="form-feedback" id="formFeedback"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#home" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L30 28H22L16 14L10 28H2L16 2Z" fill="#2563EB"/>
+                            <path d="M16 18L22 28H10L16 18Z" fill="#FFFFFF"/>
+                        </svg>
+                        AYUSOLUTION
+                    </a>
+                    <p class="footer-desc" data-i18n="footer.desc">Soluções tecnológicas para ajudar pessoas, estudantes, profissionais e empresas a usar a tecnologia de forma mais simples.</p>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footer.nav">Navegação</h5>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav.home">Início</a></li>
+                        <li><a href="#services" data-i18n="nav.services">Serviços</a></li>
+                        <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
+                        <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
+                        <li><a href="#academic" data-i18n="nav.academic">Académico</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footer.services">Serviços</h5>
+                    <ul>
+                        <li><a href="#services" data-i18n="services.s1.title">INFORMÁTICA E MANUTENÇÃO</a></li>
+                        <li><a href="#services" data-i18n="services.s2.title">IMPRESSORAS E EQUIPAMENTOS</a></li>
+                        <li><a href="#services" data-i18n="services.s3.title">REDES E CONECTIVIDADE</a></li>
+                        <li><a href="#services" data-i18n="services.s4.title">CCTV E SEGURANÇA</a></li>
+                        <li><a href="#services" data-i18n="services.s5.title">DESENVOLVIMENTO WEB</a></li>
+                        <li><a href="#services" data-i18n="services.s6.title">SISTEMAS DE GESTÃO</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footer.contact">Contactos</h5>
+                    <ul>
+                        <li><a href="https://wa.me/258870197738">+258 870197738</a></li>
+                        <li><a href="https://wa.me/258858425837">+258 858425837</a></li>
+                        <li><a href="https://wa.me/258870197738" style="color: #25D366;"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2026 Ayusolution. Todos os direitos reservados.</p>
+                <div class="lang-switcher">
+                    <span class="active">PT</span> | <span>EN</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <div class="mobile-action-bar" aria-label="Acções rápidas">
+        <a href="https://wa.me/258870197738" target="_blank" rel="noopener" class="mobile-wa" id="mobileWhatsApp"><i class="fab fa-whatsapp"></i> <span data-i18n="mobile.wa">WhatsApp</span></a>
+        <a href="#contact" class="mobile-quote"><i class="fas fa-file-signature"></i> <span data-i18n="mobile.quote">Pedir orçamento</span></a>
+    </div>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/258870197738" target="_blank" class="wa-float" aria-label="WhatsApp Ayusolution">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // ========================================
+        // AYUSOLUTION JAVASCRIPT
+        // 1. TRANSLATIONS OBJECT
+        // 2. LANGUAGE SWITCHING LOGIC
+        // 3. MOBILE MENU TOGGLE
+        // 4. SCROLL ANIMATIONS (INTERSECTION OBSERVER)
+        // 5. FORM SUBMISSION HANDLING (FORMSUBMIT.CO)
+        // ========================================
+
+        const translations = {
+            pt: {
+                "nav.home": "Início",
+                "nav.services": "Serviços",
+                "nav.about": "Sobre",
+                "nav.projects": "Projetos",
+                "nav.academic": "Académico",
+                "nav.contact": "Contactos",
+                "nav.cta": "Iniciar um Projeto",
+                
+                "hero.title": "TECNOLOGIA QUE RESOLVE PROBLEMAS REAIS.",
+                "hero.subtitle": "Soluções profissionais em informática, desenvolvimento digital, equipamentos, redes, segurança e apoio académico.",
+                "hero.btn1": "Conhecer os nossos serviços",
+                "hero.btn2": "Falar connosco",
+                "hero.status": "Sistemas Operacionais",
+                "hero.location": "Quelimane, Moçambique · Atendimento presencial e remoto",
+                "hero.specialty": "Especialidades:",
+
+                "popular.title": "SERVIÇOS MAIS PROCURADOS",
+                "popular.heading": "Comece rapidamente pelo serviço que precisa.",
+                "popular.p1.title": "Reparação de computadores",
+                "popular.p1.desc": "Diagnóstico, manutenção, formatação, Windows, drivers, RAM e SSD.",
+                "popular.p2.title": "Criação de websites",
+                "popular.p2.desc": "Websites empresariais, pessoais, landing pages, portfólios e sistemas web.",
+                "popular.p3.title": "Apoio académico",
+                "popular.p3.desc": "Estruturação, revisão, formatação, referências e preparação de apresentações.",
+                "popular.cta": "Pedir orçamento",
+                "tech.label": "Tecnologias & áreas",
+
+                "services.title": "O QUE FAZEMOS",
+                "services.heading": "Soluções tecnológicas completas para impulsionar o seu dia a dia.",
+                "services.s1.title": "INFORMÁTICA E MANUTENÇÃO",
+                "services.s1.i1": "Reparação de computadores",
+                "services.s1.i2": "Diagnóstico de problemas",
+                "services.s1.i3": "Manutenção de computadores",
+                "services.s1.i4": "Formatação",
+                "services.s1.i5": "Instalação do Windows",
+                "services.s1.i6": "Configuração do Windows",
+                "services.s1.i7": "Instalação de software",
+                "services.s1.i8": "Instalação de drivers",
+                "services.s1.i9": "Otimização do sistema",
+                "services.s1.i10": "Upgrade de RAM",
+                "services.s1.i11": "Upgrade de SSD",
+                "services.s1.i12": "Configuração de computadores",
+                "services.s1.i13": "Manutenção preventiva",
+                
+                "services.s2.title": "IMPRESSORAS E EQUIPAMENTOS",
+                "services.s2.i1": "Instalação de impressoras",
+                "services.s2.i2": "Configuração de impressoras",
+                "services.s2.i3": "Manutenção de impressoras",
+                "services.s2.i4": "Diagnóstico de problemas",
+                "services.s2.i5": "Instalação de drivers",
+                "services.s2.i6": "Configuração em rede",
+                "services.s2.i7": "Configuração de scanners",
+                "services.s2.i8": "Configuração de equipamentos",
+                "services.s2.i9": "Manutenção de equipamentos",
+                
+                "services.s3.title": "REDES E CONECTIVIDADE",
+                "services.s3.i1": "Instalação de redes Wi-Fi",
+                "services.s3.i2": "Configuração de routers",
+                "services.s3.i3": "Redes LAN",
+                "services.s3.i4": "Resolução de conectividade",
+                "services.s3.i5": "Partilha de recursos",
+                "services.s3.i6": "Configuração básica de servidores",
+                
+                "services.s4.title": "CCTV E SEGURANÇA",
+                "services.s4.i1": "Instalação de câmeras",
+                "services.s4.i2": "Configuração de CCTV",
+                "services.s4.i3": "Configuração de DVR/NVR",
+                "services.s4.i4": "Acesso remoto pelo telemóvel",
+                "services.s4.i5": "Manutenção de sistemas",
+                "services.s4.i6": "Configuração de videovigilância",
+                
+                "services.s5.title": "DESENVOLVIMENTO WEB",
+                "services.s5.i1": "Websites empresariais",
+                "services.s5.i2": "Websites pessoais",
+                "services.s5.i3": "Portfolios",
+                "services.s5.i4": "Landing pages",
+                "services.s5.i5": "Lojas online",
+                "services.s5.i6": "Sistemas web",
+                
+                "services.s6.title": "SISTEMAS DE GESTÃO",
+                "services.s6.i1": "Sistemas de vendas",
+                "services.s6.i2": "Gestão de stock",
+                "services.s6.i3": "Gestão de clientes",
+                "services.s6.i4": "Sistemas para restaurantes",
+                "services.s6.i5": "Sistemas de reservas",
+                "services.s6.i6": "Sistemas personalizados",
+                
+                "services.s7.title": "SOLUÇÕES DIGITAIS",
+                "services.s7.i1": "Digitalização de processos",
+                "services.s7.i2": "Organização de informação",
+                "services.s7.i3": "Automatização de tarefas",
+                "services.s7.i4": "Bases de dados",
+                "services.s7.i5": "Consultoria informática",
+                "services.s7.i6": "Soluções personalizadas",
+                
+                "about.title": "SOBRE A AYUSOLUTION",
+                "about.heading": "Tecnologia com propósito.",
+                "about.p1": "A Ayusolution é uma iniciativa dedicada à tecnologia e às soluções digitais, criada para ajudar pessoas, estudantes, profissionais e empresas a utilizar a tecnologia de forma mais simples, eficiente e prática. Atuamos no desenvolvimento de websites e sistemas, suporte informático, manutenção de computadores e impressoras, redes, CCTV, soluções digitais e apoio à produção académica e científica. O nosso objetivo é transformar necessidades reais em soluções funcionais, acessíveis e profissionais.",
+                "about.founder_title": "QUEM ESTÁ POR TRÁS DA AYUSOLUTION",
+                "about.founder_p": "Por trás da Ayusolution existe uma paixão por tecnologia, desenvolvimento e resolução de problemas. Através da aprendizagem contínua e da prática, transformamos necessidades do dia a dia em soluções digitais e tecnológicas úteis.",
+                
+                "projects.title": "PROJETOS SELECIONADOS",
+                "projects.heading": "Trabalhos e conceitos desenvolvidos.",
+                "projects.more": "Ver detalhes",
+                "gallery.title": "GALERIA DE SERVIÇOS",
+                "gallery.heading": "Uma visão rápida das áreas em que actuamos.",
+                "gallery.note": "As imagens desta secção são ilustrativas. Quando existirem fotografias reais autorizadas dos trabalhos, podem substituir estas peças sem alterar o layout.",
+                "gallery.g1": "Informática & Manutenção",
+                "gallery.g1s": "Diagnóstico, reparação e optimização.",
+                "gallery.g2": "Impressoras & Equipamentos",
+                "gallery.g2s": "Instalação, configuração e manutenção.",
+                "gallery.g3": "Web & Sistemas",
+                "gallery.g3s": "Websites, plataformas e sistemas personalizados.",
+                "gallery.g4": "Redes & Conectividade",
+                "gallery.g4s": "Wi-Fi, LAN, routers e partilha de recursos.",
+                "gallery.g5": "CCTV & Segurança",
+                "gallery.g5s": "Videovigilância e acesso remoto.",
+                "gallery.g6": "Apoio Académico",
+                "gallery.g6s": "Estruturação, revisão e formatação.",
+                "modal.challenge": "Necessidade",
+                "modal.solution": "Solução proposta",
+                "modal.tech": "Tecnologias / área",
+                "modal.status": "Estado",
+                "modal.cta": "Solicitar algo semelhante",
+                "modal.close": "Fechar",
+                "mobile.wa": "WhatsApp",
+                "mobile.quote": "Pedir orçamento",
+                "projects.tag1": "Demo Project",
+                "projects.p1.title": "Business Management System",
+                "projects.p1.desc": "Sistema de gestão de vendas, stock e clientes.",
+                "projects.p2.title": "Restaurant Management System",
+                "projects.p2.desc": "Sistema de pedidos, reservas e gestão de mesa.",
+                "projects.p3.title": "Ticket Reservation System",
+                "projects.p3.desc": "Plataforma web para reservas e emissão de bilhetes.",
+                "projects.p4.title": "Corporate Website",
+                "projects.p4.desc": "Desenvolvimento de website institucional moderno.",
+                "projects.p5.title": "Network Infrastructure",
+                "projects.p5.desc": "Implementação de rede LAN e configuração Wi-Fi.",
+                "projects.p6.title": "IT Equipment Maintenance",
+                "projects.p6.desc": "Manutenção preventiva e corretiva de equipamentos.",
+                
+                "academic.title": "APOIO ACADÉMICO E CIENTÍFICO",
+                "academic.heading": "Apoio na estruturação e formatação de documentos académicos.",
+                "academic.i1": "Elaboração de trabalhos científicos",
+                "academic.i2": "Monografias",
+                "academic.i3": "Artigos científicos",
+                "academic.i4": "Projectos de pesquisa",
+                "academic.i5": "Relatórios académicos",
+                "academic.i6": "Revisão e correcção de trabalhos",
+                "academic.i7": "Formatação académica",
+                "academic.i8": "Referências bibliográficas",
+                "academic.i9": "Apresentações em PowerPoint",
+                "academic.i10": "Apoio na preparação para defesa",
+                
+                "process.title": "COMO TRABALHAMOS",
+                "process.heading": "Um processo simples e focado em resultados.",
+                "process.p1.title": "Entender",
+                "process.p1.desc": "Compreender as necessidades do cliente.",
+                "process.p2.title": "Planejar",
+                "process.p2.desc": "Definir a solução adequada.",
+                "process.p3.title": "Desenvolver",
+                "process.p3.desc": "Construir, configurar ou implementar.",
+                "process.p4.title": "Acompanhar",
+                "process.p4.desc": "Fornecer suporte e melhorias.",
+                
+                "why.title": "PORQUÊ A AYUSOLUTION?",
+                "why.heading": "Razões para confiar em nós.",
+                "why.w1.title": "Soluções práticas",
+                "why.w1.desc": "Tecnologia aplicada a problemas reais.",
+                "why.w2.title": "Atendimento próximo",
+                "why.w2.desc": "Suporte direto e dedicado a cada cliente.",
+                "why.w3.title": "Tecnologia acessível",
+                "why.w3.desc": "Soluções acessíveis para todos os bolsos.",
+                "why.w4.title": "Soluções personalizadas",
+                "why.w4.desc": "Adaptadas às necessidades específicas.",
+                
+                "faq.title": "PERGUNTAS FREQUENTES",
+                "faq.heading": "Algumas respostas antes de começar.",
+                "faq.q1": "Como posso pedir um orçamento?",
+                "faq.a1": "Escolha um serviço no formulário ou contacte-nos pelo WhatsApp. Explique o que precisa e responderemos com a orientação adequada.",
+                "faq.q2": "A Ayusolution faz atendimento remoto?",
+                "faq.a2": "Sim. Dependendo do serviço, o apoio pode ser feito remotamente. Serviços que exigem intervenção física são combinados directamente com o cliente.",
+                "faq.q3": "Trabalham com pessoas e empresas?",
+                "faq.a3": "Sim. Atendemos estudantes, profissionais, pequenos negócios, organizações e clientes individuais, de acordo com cada necessidade.",
+                "faq.q4": "Posso solicitar uma solução personalizada?",
+                "faq.a4": "Sim. Websites, sistemas, redes e outras soluções podem ser ajustados ao problema e ao contexto do cliente.",
+
+                "contact.title": "TEM UM PROJETO EM MENTE?",
+                "contact.heading": "Fale connosco e vamos encontrar uma solução para o que precisa.",
+                "contact.subtitle": "Estamos prontos para ajudar com tecnologia, equipamentos, redes ou apoio académico.",
+                "contact.wa": "Falar pelo WhatsApp",
+                "contact.form.name": "Nome",
+                "contact.form.email": "Email",
+                "contact.form.phone": "Telefone / WhatsApp",
+                "contact.form.service": "Serviço",
+                "contact.form.select": "Selecione um serviço",
+                "contact.form.message": "Mensagem",
+                "contact.form.btn": "Enviar pedido",
+                "contact.form.success": "Pedido enviado com sucesso! Entraremos em contacto brevemente.",
+                
+                "footer.desc": "Soluções tecnológicas para ajudar pessoas, estudantes, profissionais e empresas a usar a tecnologia de forma mais simples.",
+                "footer.nav": "Navegação",
+                "footer.services": "Serviços",
+                "footer.contact": "Contactos",
+                "footer.copyright": "© 2026 Ayusolution. Todos os direitos reservados."
+            },
+            en: {
+                "nav.home": "Home",
+                "nav.services": "Services",
+                "nav.about": "About",
+                "nav.projects": "Projects",
+                "nav.academic": "Academic",
+                "nav.contact": "Contact",
+                "nav.cta": "Start a Project",
+                
+                "hero.title": "TECHNOLOGY THAT SOLVES REAL PROBLEMS.",
+                "hero.subtitle": "Professional solutions in IT, digital development, equipment, networking, security and academic support.",
+                "hero.btn1": "Explore our services",
+                "hero.btn2": "Talk to us",
+                "hero.status": "Operating Systems",
+                "hero.location": "Quelimane, Mozambique · On-site and remote support",
+                "hero.specialty": "Specialties:",
+
+                "popular.title": "MOST REQUESTED SERVICES",
+                "popular.heading": "Start quickly with the service you need.",
+                "popular.p1.title": "Computer repair",
+                "popular.p1.desc": "Diagnosis, maintenance, formatting, Windows, drivers, RAM and SSD.",
+                "popular.p2.title": "Website development",
+                "popular.p2.desc": "Business and personal websites, landing pages, portfolios and web systems.",
+                "popular.p3.title": "Academic support",
+                "popular.p3.desc": "Structuring, reviewing, formatting, references and presentation preparation.",
+                "popular.cta": "Request a quote",
+                "tech.label": "Technologies & areas",
+
+                "services.title": "WHAT WE DO",
+                "services.heading": "Complete technological solutions to boost your daily life.",
+                "services.s1.title": "COMPUTER & IT SERVICES",
+                "services.s1.i1": "Computer repair",
+                "services.s1.i2": "Problem diagnosis",
+                "services.s1.i3": "Computer maintenance",
+                "services.s1.i4": "Formatting",
+                "services.s1.i5": "Windows installation",
+                "services.s1.i6": "Windows configuration",
+                "services.s1.i7": "Software installation",
+                "services.s1.i8": "Driver installation",
+                "services.s1.i9": "System optimization",
+                "services.s1.i10": "RAM upgrade",
+                "services.s1.i11": "SSD upgrade",
+                "services.s1.i12": "Computer setup",
+                "services.s1.i13": "Preventive maintenance",
+                
+                "services.s2.title": "PRINTERS & EQUIPMENT",
+                "services.s2.i1": "Printer installation",
+                "services.s2.i2": "Printer configuration",
+                "services.s2.i3": "Printer maintenance",
+                "services.s2.i4": "Problem diagnosis",
+                "services.s2.i5": "Driver installation",
+                "services.s2.i6": "Network configuration",
+                "services.s2.i7": "Scanner configuration",
+                "services.s2.i8": "Equipment setup",
+                "services.s2.i9": "Equipment maintenance",
+                
+                "services.s3.title": "NETWORKS & CONNECTIVITY",
+                "services.s3.i1": "Wi-Fi network installation",
+                "services.s3.i2": "Router configuration",
+                "services.s3.i3": "LAN networks",
+                "services.s3.i4": "Connectivity troubleshooting",
+                "services.s3.i5": "Resource sharing",
+                "services.s3.i6": "Basic server configuration",
+                
+                "services.s4.title": "CCTV & SECURITY",
+                "services.s4.i1": "Camera installation",
+                "services.s4.i2": "CCTV configuration",
+                "services.s4.i3": "DVR/NVR configuration",
+                "services.s4.i4": "Remote mobile access",
+                "services.s4.i5": "System maintenance",
+                "services.s4.i6": "Video surveillance setup",
+                
+                "services.s5.title": "WEB DEVELOPMENT",
+                "services.s5.i1": "Business websites",
+                "services.s5.i2": "Personal websites",
+                "services.s5.i3": "Portfolios",
+                "services.s5.i4": "Landing pages",
+                "services.s5.i5": "Online stores",
+                "services.s5.i6": "Web systems",
+                
+                "services.s6.title": "BUSINESS MANAGEMENT SYSTEMS",
+                "services.s6.i1": "Sales systems",
+                "services.s6.i2": "Stock management",
+                "services.s6.i3": "Customer management",
+                "services.s6.i4": "Restaurant systems",
+                "services.s6.i5": "Reservation systems",
+                "services.s6.i6": "Custom systems",
+                
+                "services.s7.title": "DIGITAL SOLUTIONS",
+                "services.s7.i1": "Process digitization",
+                "services.s7.i2": "Information organization",
+                "services.s7.i3": "Task automation",
+                "services.s7.i4": "Databases",
+                "services.s7.i5": "IT consulting",
+                "services.s7.i6": "Custom solutions",
+                
+                "about.title": "ABOUT AYUSOLUTION",
+                "about.heading": "Technology with purpose.",
+                "about.p1": "Ayusolution is a technology and digital solutions initiative focused on helping individuals, students, professionals and businesses use technology in a simpler, more efficient and practical way. We provide website and software development, IT support, computer and printer maintenance, networking, CCTV, digital solutions and academic and research support. Our goal is to turn real needs into functional, accessible and professional solutions.",
+                "about.founder_title": "THE PERSON BEHIND AYUSOLUTION",
+                "about.founder_p": "Behind Ayusolution is a passion for technology, development and problem solving. Through continuous learning and practical experience, we turn everyday needs into useful digital and technological solutions.",
+                
+                "projects.title": "SELECTED PROJECTS",
+                "projects.heading": "Developed works and concepts.",
+                "projects.more": "View details",
+                "gallery.title": "SERVICE GALLERY",
+                "gallery.heading": "A quick look at the areas we work in.",
+                "gallery.note": "The images in this section are illustrative. When authorised real work photos are available, they can replace these pieces without changing the layout.",
+                "gallery.g1": "IT & Maintenance",
+                "gallery.g1s": "Diagnosis, repair and optimisation.",
+                "gallery.g2": "Printers & Equipment",
+                "gallery.g2s": "Installation, setup and maintenance.",
+                "gallery.g3": "Web & Systems",
+                "gallery.g3s": "Websites, platforms and custom systems.",
+                "gallery.g4": "Networks & Connectivity",
+                "gallery.g4s": "Wi-Fi, LAN, routers and resource sharing.",
+                "gallery.g5": "CCTV & Security",
+                "gallery.g5s": "Video surveillance and remote access.",
+                "gallery.g6": "Academic Support",
+                "gallery.g6s": "Structuring, reviewing and formatting.",
+                "modal.challenge": "Need",
+                "modal.solution": "Proposed solution",
+                "modal.tech": "Technologies / area",
+                "modal.status": "Status",
+                "modal.cta": "Request something similar",
+                "modal.close": "Close",
+                "mobile.wa": "WhatsApp",
+                "mobile.quote": "Request quote",
+                "projects.tag1": "Concept Project",
+                "projects.p1.title": "Business Management System",
+                "projects.p1.desc": "Sales, stock and customer management system.",
+                "projects.p2.title": "Restaurant Management System",
+                "projects.p2.desc": "Order, reservation and table management system.",
+                "projects.p3.title": "Ticket Reservation System",
+                "projects.p3.desc": "Web platform for booking and ticket issuing.",
+                "projects.p4.title": "Corporate Website",
+                "projects.p4.desc": "Modern institutional website development.",
+                "projects.p5.title": "Network Infrastructure",
+                "projects.p5.desc": "LAN implementation and Wi-Fi configuration.",
+                "projects.p6.title": "IT Equipment Maintenance",
+                "projects.p6.desc": "Preventive and corrective equipment maintenance.",
+                
+                "academic.title": "ACADEMIC & RESEARCH SUPPORT",
+                "academic.heading": "Support in structuring and formatting academic documents.",
+                "academic.i1": "Preparation of scientific papers",
+                "academic.i2": "Monographs",
+                "academic.i3": "Scientific articles",
+                "academic.i4": "Research projects",
+                "academic.i5": "Academic reports",
+                "academic.i6": "Review and correction of papers",
+                "academic.i7": "Academic formatting",
+                "academic.i8": "Bibliographic references",
+                "academic.i9": "PowerPoint presentations",
+                "academic.i10": "Defense preparation support",
+                
+                "process.title": "HOW WE WORK",
+                "process.heading": "A simple process focused on results.",
+                "process.p1.title": "Understand",
+                "process.p1.desc": "Understand the client's needs.",
+                "process.p2.title": "Plan",
+                "process.p2.desc": "Define the appropriate solution.",
+                "process.p3.title": "Develop",
+                "process.p3.desc": "Build, configure or implement.",
+                "process.p4.title": "Support",
+                "process.p4.desc": "Provide support and improvements.",
+                
+                "why.title": "WHY AYUSOLUTION?",
+                "why.heading": "Reasons to trust us.",
+                "why.w1.title": "Practical solutions",
+                "why.w1.desc": "Technology applied to real problems.",
+                "why.w2.title": "Direct support",
+                "why.w2.desc": "Dedicated support for every client.",
+                "why.w3.title": "Accessible technology",
+                "why.w3.desc": "Affordable solutions for all budgets.",
+                "why.w4.title": "Custom solutions",
+                "why.w4.desc": "Tailored to specific needs.",
+                
+                "faq.title": "FREQUENTLY ASKED QUESTIONS",
+                "faq.heading": "A few answers before you get started.",
+                "faq.q1": "How can I request a quote?",
+                "faq.a1": "Choose a service in the form or contact us on WhatsApp. Tell us what you need and we will respond with the appropriate guidance.",
+                "faq.q2": "Does Ayusolution provide remote support?",
+                "faq.a2": "Yes. Depending on the service, support can be provided remotely. Services requiring physical intervention are arranged directly with the client.",
+                "faq.q3": "Do you work with individuals and businesses?",
+                "faq.a3": "Yes. We work with students, professionals, small businesses, organizations and individual clients according to each need.",
+                "faq.q4": "Can I request a custom solution?",
+                "faq.a4": "Yes. Websites, systems, networks and other solutions can be adapted to the client's problem and context.",
+
+                "contact.title": "HAVE A PROJECT IN MIND?",
+                "contact.heading": "Tell us what you need and let's find the right solution.",
+                "contact.subtitle": "We are ready to help with technology, equipment, networks or academic support.",
+                "contact.wa": "Talk on WhatsApp",
+                "contact.form.name": "Name",
+                "contact.form.email": "Email",
+                "contact.form.phone": "Phone / WhatsApp",
+                "contact.form.service": "Service",
+                "contact.form.select": "Select a service",
+                "contact.form.message": "Message",
+                "contact.form.btn": "Send request",
+                "contact.form.success": "Request sent successfully! We will contact you shortly.",
+                
+                "footer.desc": "Technology solutions to help individuals, students, professionals and businesses use technology more simply.",
+                "footer.nav": "Navigation",
+                "footer.services": "Services",
+                "footer.contact": "Contact",
+                "footer.copyright": "© 2026 Ayusolution. All rights reserved."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            
+            // Update all text elements
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Keep WhatsApp message aligned with the translated service selection
+            if (typeof updateWhatsAppService === 'function') {
+                setTimeout(updateWhatsAppService, 0);
+            }
+
+            // Update active button state
+            document.getElementById('lang-pt').classList.remove('active');
+            document.getElementById('lang-en').classList.remove('active');
+            document.getElementById('lang-' + lang).classList.add('active');
+            
+            // Update document title and remember the language
+            document.title = lang === 'pt' ? 
+                'Ayusolution — Soluções Tecnológicas e Digitais' : 
+                'Ayusolution — Technology & Digital Solutions';
+            localStorage.setItem('ayusolution-language', lang);
+            updateThemeButton();
+            updateRotatingService(true);
+        }
+
+        // LIGHT / DARK MODE
+        const themeToggle = document.getElementById('themeToggle');
+
+        function updateThemeButton() {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            const currentLang = document.documentElement.lang || 'pt';
+            const icon = themeToggle.querySelector('i');
+            icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+            const label = currentLang === 'pt'
+                ? (isLight ? 'Activar modo escuro' : 'Activar modo claro')
+                : (isLight ? 'Enable dark mode' : 'Enable light mode');
+            themeToggle.setAttribute('aria-label', label);
+            themeToggle.setAttribute('title', label);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('ayusolution-theme', next);
+            updateThemeButton();
+        });
+        updateThemeButton();
+
+        // ROTATING HERO SPECIALTIES
+        const rotatingServices = {
+            pt: ['Websites & Sistemas', 'Informática & Manutenção', 'Redes & Conectividade', 'CCTV & Segurança', 'Apoio Académico'],
+            en: ['Websites & Systems', 'IT & Maintenance', 'Networks & Connectivity', 'CCTV & Security', 'Academic Support']
+        };
+        let rotatingIndex = 0;
+        const rotatingServiceEl = document.getElementById('rotatingService');
+
+        function updateRotatingService(immediate = false) {
+            const lang = document.documentElement.lang === 'en' ? 'en' : 'pt';
+            if (immediate) {
+                rotatingIndex = 0;
+                rotatingServiceEl.textContent = rotatingServices[lang][rotatingIndex];
+                return;
+            }
+            rotatingServiceEl.classList.add('is-changing');
+            setTimeout(() => {
+                rotatingIndex = (rotatingIndex + 1) % rotatingServices[lang].length;
+                rotatingServiceEl.textContent = rotatingServices[lang][rotatingIndex];
+                rotatingServiceEl.classList.remove('is-changing');
+            }, 250);
+        }
+        setInterval(() => updateRotatingService(false), 2600);
+
+        // Apply saved language only after theme and hero helpers are ready
+        const savedLanguage = localStorage.getItem('ayusolution-language');
+        if (savedLanguage === 'en') {
+            setLanguage('en');
+        } else {
+            updateRotatingService(true);
+        }
+
+        // PROJECT PORTFOLIO MODAL
+        const projectDetails = {
+            p1: { icon: 'fa-cash-register', serviceKey: 'services.s6.title', pt: { tag: 'Demo Project', title: 'Business Management System', summary: 'Conceito de sistema para centralizar vendas, stock e clientes num único ambiente.', challenge: 'Organizar operações comerciais que normalmente ficam dispersas em cadernos, folhas de cálculo ou processos manuais.', solution: 'Painel de gestão com registo de vendas, controlo de stock e informação de clientes.', tech: 'Sistemas web · Base de dados · Gestão', status: 'Demonstração / conceito' }, en: { tag: 'Demo Project', title: 'Business Management System', summary: 'System concept to centralise sales, stock and customers in one environment.', challenge: 'Organise commercial operations usually spread across notebooks, spreadsheets or manual processes.', solution: 'Management dashboard with sales records, stock control and customer information.', tech: 'Web systems · Database · Management', status: 'Demo / concept' } },
+            p2: { icon: 'fa-utensils', serviceKey: 'services.s6.title', pt: { tag: 'Concept Project', title: 'Restaurant Management System', summary: 'Conceito de plataforma para pedidos, reservas e organização de mesas.', challenge: 'Reduzir desorganização entre pedidos, disponibilidade de mesas e reservas.', solution: 'Sistema com registo de pedidos, reservas e controlo básico de mesas.', tech: 'Sistema web · Reservas · Gestão', status: 'Projecto conceptual' }, en: { tag: 'Concept Project', title: 'Restaurant Management System', summary: 'Platform concept for orders, reservations and table organisation.', challenge: 'Reduce confusion between orders, table availability and reservations.', solution: 'System with order records, reservations and basic table control.', tech: 'Web system · Reservations · Management', status: 'Concept project' } },
+            p3: { icon: 'fa-ticket-alt', serviceKey: 'services.s6.title', pt: { tag: 'Concept Project', title: 'Ticket Reservation System', summary: 'Plataforma conceptual para reservas e emissão digital de bilhetes.', challenge: 'Facilitar o processo de reserva e reduzir dependência de registos manuais.', solution: 'Fluxo digital de pesquisa, reserva, confirmação e emissão de bilhete.', tech: 'Web · Reservas · Base de dados', status: 'Projecto conceptual' }, en: { tag: 'Concept Project', title: 'Ticket Reservation System', summary: 'Concept platform for reservations and digital ticket issuing.', challenge: 'Simplify the booking process and reduce dependence on manual records.', solution: 'Digital flow for search, booking, confirmation and ticket issuing.', tech: 'Web · Reservations · Database', status: 'Concept project' } },
+            p4: { icon: 'fa-globe', serviceKey: 'services.s5.title', pt: { tag: 'Demo Project', title: 'Corporate Website', summary: 'Modelo de website institucional moderno, responsivo e orientado para contactos.', challenge: 'Dar presença digital profissional a uma organização e apresentar serviços com clareza.', solution: 'Website responsivo com apresentação institucional, serviços, portfólio e contacto.', tech: 'HTML · CSS · JavaScript · SEO', status: 'Demonstração / conceito' }, en: { tag: 'Demo Project', title: 'Corporate Website', summary: 'Modern, responsive corporate website model focused on generating contacts.', challenge: 'Give an organisation a professional digital presence and clearly present its services.', solution: 'Responsive website with company profile, services, portfolio and contact.', tech: 'HTML · CSS · JavaScript · SEO', status: 'Demo / concept' } },
+            p5: { icon: 'fa-server', serviceKey: 'services.s3.title', pt: { tag: 'Concept Project', title: 'Network Infrastructure', summary: 'Conceito de implementação de rede LAN e configuração de conectividade Wi-Fi.', challenge: 'Melhorar ligação entre equipamentos e partilha de recursos numa pequena organização.', solution: 'Planeamento básico de rede, configuração de router e estrutura LAN/Wi-Fi.', tech: 'LAN · Wi-Fi · Routers · Redes', status: 'Projecto conceptual' }, en: { tag: 'Concept Project', title: 'Network Infrastructure', summary: 'Concept for LAN implementation and Wi-Fi connectivity configuration.', challenge: 'Improve device connectivity and resource sharing in a small organisation.', solution: 'Basic network planning, router setup and LAN/Wi-Fi structure.', tech: 'LAN · Wi-Fi · Routers · Networks', status: 'Concept project' } },
+            p6: { icon: 'fa-tools', serviceKey: 'services.s1.title', pt: { tag: 'Demo Project', title: 'IT Equipment Maintenance', summary: 'Fluxo de manutenção preventiva e correctiva para equipamentos informáticos.', challenge: 'Identificar falhas, reduzir lentidão e prolongar a vida útil dos equipamentos.', solution: 'Diagnóstico, limpeza, optimização, configuração e substituição de componentes quando necessário.', tech: 'Hardware · Windows · Diagnóstico', status: 'Demonstração de serviço' }, en: { tag: 'Demo Project', title: 'IT Equipment Maintenance', summary: 'Preventive and corrective maintenance workflow for IT equipment.', challenge: 'Identify faults, reduce slowness and extend equipment life.', solution: 'Diagnosis, cleaning, optimisation, configuration and component replacement when necessary.', tech: 'Hardware · Windows · Diagnostics', status: 'Service demo' } }
+        };
+
+        const projectModal = document.getElementById('projectModal');
+        const projectModalClose = document.getElementById('projectModalClose');
+        const projectModalDismiss = document.getElementById('projectModalDismiss');
+        const projectModalQuote = document.getElementById('projectModalQuote');
+        let activeProjectKey = null;
+        let lastProjectTrigger = null;
+
+        function openProjectModal(projectKey, trigger) {
+            const project = projectDetails[projectKey];
+            if (!project) return;
+            activeProjectKey = projectKey;
+            lastProjectTrigger = trigger || null;
+            const lang = document.documentElement.lang === 'en' ? 'en' : 'pt';
+            const data = project[lang];
+            document.getElementById('projectModalIcon').className = `fas ${project.icon}`;
+            document.getElementById('projectModalTag').textContent = data.tag;
+            document.getElementById('projectModalTitle').textContent = data.title;
+            document.getElementById('projectModalSummary').textContent = data.summary;
+            document.getElementById('projectModalChallenge').textContent = data.challenge;
+            document.getElementById('projectModalSolution').textContent = data.solution;
+            document.getElementById('projectModalTech').textContent = data.tech;
+            document.getElementById('projectModalStatus').textContent = data.status;
+            projectModal.classList.add('open');
+            projectModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+            projectModalClose.focus();
+        }
+
+        function closeProjectModal() {
+            projectModal.classList.remove('open');
+            projectModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+            if (lastProjectTrigger) lastProjectTrigger.focus();
+        }
+
+        document.querySelectorAll('.project-card[data-project]').forEach(card => {
+            card.addEventListener('click', () => openProjectModal(card.dataset.project, card));
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openProjectModal(card.dataset.project, card); }
+            });
+        });
+        projectModalClose.addEventListener('click', closeProjectModal);
+        projectModalDismiss.addEventListener('click', closeProjectModal);
+        projectModal.addEventListener('click', (event) => { if (event.target === projectModal) closeProjectModal(); });
+        document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && projectModal.classList.contains('open')) closeProjectModal(); });
+        projectModalQuote.addEventListener('click', () => {
+            if (!activeProjectKey) return;
+            const key = projectDetails[activeProjectKey].serviceKey;
+            closeProjectModal();
+            requestService(key);
+        });
+
+        // SERVICE SHORTCUTS
+        function requestService(translationKey) {
+            const serviceSelect = document.getElementById('service');
+            const option = Array.from(serviceSelect.options).find(opt => opt.getAttribute('data-i18n') === translationKey);
+            if (option) {
+                serviceSelect.value = option.value;
+                updateWhatsAppService();
+            }
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => serviceSelect.focus({ preventScroll: true }), 500);
+        }
+
+        function updateWhatsAppService() {
+            const service = document.getElementById('service').value;
+            const lang = document.documentElement.lang === 'en' ? 'en' : 'pt';
+            const message = service
+                ? (lang === 'pt' ? `Olá Ayusolution, gostaria de pedir informações sobre: ${service}.` : `Hello Ayusolution, I would like information about: ${service}.`)
+                : (lang === 'pt' ? 'Olá Ayusolution, gostaria de pedir informações sobre os vossos serviços.' : 'Hello Ayusolution, I would like information about your services.');
+            const url = `https://wa.me/258870197738?text=${encodeURIComponent(message)}`;
+            document.querySelectorAll('.wa-float, .whatsapp-btn, #mobileWhatsApp').forEach(link => link.href = url);
+        }
+        document.getElementById('service').addEventListener('change', updateWhatsAppService);
+        updateWhatsAppService();
+
+        // Header scroll effect
+        const backToTop = document.getElementById('backToTop');
+        const scrollProgress = document.getElementById('scrollProgress');
+
+        function updateScrollUI() {
+            const header = document.getElementById('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+            backToTop.classList.toggle('visible', window.scrollY > 650);
+
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+            scrollProgress.style.width = `${Math.min(progress, 100)}%`;
+        }
+
+        window.addEventListener('scroll', updateScrollUI, { passive: true });
+        updateScrollUI();
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.querySelector('i').classList.remove('fa-times');
+                hamburger.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission logic — envia para o teu email via FormSubmit
+        const contactForm = document.getElementById('contactForm');
+        const formFeedback = document.getElementById('formFeedback');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const currentLang = document.documentElement.lang;
+
+            // Loading state
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            btn.disabled = true;
+
+            const formData = {
+                Nome: document.getElementById('name').value,
+                Email: document.getElementById('email').value,
+                Telefone: document.getElementById('phone').value,
+                Serviço: document.getElementById('service').value,
+                Mensagem: document.getElementById('message').value,
+                _subject: "Novo pedido — Ayusolution"
+            };
+
+            fetch('https://formsubmit.co/ajax/ismaelmussabacar0@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(() => {
+                formFeedback.style.display = 'block';
+                formFeedback.classList.add('success');
+                formFeedback.textContent = translations[currentLang]['contact.form.success'];
+
+                contactForm.reset();
+                btn.innerHTML = translations[currentLang]['contact.form.btn'];
+                btn.disabled = false;
+
+                setTimeout(() => {
+                    formFeedback.style.display = 'none';
+                    formFeedback.classList.remove('success');
+                }, 5000);
+            })
+            .catch(() => {
+                btn.innerHTML = translations[currentLang]['contact.form.btn'];
+                btn.disabled = false;
+                formFeedback.style.display = 'block';
+                formFeedback.style.background = 'rgba(239,68,68,0.1)';
+                formFeedback.style.color = '#EF4444';
+                formFeedback.style.border = '1px solid #EF4444';
+                formFeedback.textContent = currentLang === 'pt'
+                    ? 'Erro ao enviar. Tenta novamente ou contacta-nos pelo WhatsApp.'
+                    : 'Error sending. Please try again or contact us via WhatsApp.';
+            });
+        });
+    </script>
+</body>
+</html>
