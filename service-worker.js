@@ -1,8 +1,8 @@
 /* AYUSOLUTION V13 — cache seguro e leve para redes móveis */
-const VERSION = 'ayusolution-v13-mobile';
+const VERSION = 'ayusolution-v13-mobile-metrics-1';
 const SHELL_CACHE = VERSION + '-shell';
 const ASSETS_CACHE = VERSION + '-assets';
-const PRECACHE = ['/offline.html', '/index.html', '/assets/css/site-v13.css', '/assets/js/site-v13.js'];
+const PRECACHE = ['/offline.html', '/index.html', '/assets/css/site-v13.css?v=20261017-mobile1', '/assets/js/site-v13.js'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(SHELL_CACHE).then(cache => cache.addAll(PRECACHE)).then(() => self.skipWaiting()));

@@ -2142,3 +2142,41 @@
 a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--color-primary);outline-offset:3px}
 @media(max-width:768px){.guide-grid{grid-template-columns:1fr;gap:12px}.guide-card{padding:20px}.guide-card:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.guide-card{transition:none}}
+
+/* Mobile PageSpeed: make above-the-fold content paint without waiting for JS. */
+#home .reveal,
+#home .reveal.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+/* Prevent icon font loading from changing the width of labels and buttons. */
+i.fas, i.fab, i.far {
+    display: inline-block;
+    font-style: normal;
+    min-width: 1.15em;
+    text-align: center;
+    line-height: 1;
+}
+@media (max-width: 768px) {
+    /* Prefer immediate system font rendering over late third-party font swaps. */
+    :root {
+        --font-heading: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    /* Rotating words keep the same two-line space: no repeated layout shifts. */
+    #home .hero-rotator {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        min-height: 3.4em;
+        line-height: 1.4;
+    }
+    #home .hero-rotator .rotating-service {
+        display: block;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+    #home .hero-location { min-height: 44px; }
+}
