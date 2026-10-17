@@ -1,0 +1,8 @@
+AYUSOLUTION V12 PERFORMANCE
+
+- Google verification meta tag preserved.
+- Sitemap and robots preserved.
+- Photos removed from inline HTML and converted to WebP.
+- Hero photo loads eagerly; other photos load lazily.
+- Service worker no longer preloads service/gallery photos on first visit.
+- Cloudflare cache headers added for static images.
