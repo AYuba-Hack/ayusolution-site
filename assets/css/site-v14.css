@@ -1,0 +1,31 @@
+/* AYU Solution V14: multi-page layout preserving V13 palette and components */
+.ayu-v14 .nav-links{gap:clamp(10px,1.35vw,23px)}
+.ayu-v14 .nav-links a.active::after{width:100%}
+.ayu-page-intro{padding:138px 0 46px;background:var(--bg-dark);border-bottom:1px solid var(--color-border)}
+.ayu-page-intro h1{max-width:860px;font-size:clamp(32px,5vw,58px);line-height:1.13;margin:12px 0 17px;letter-spacing:-.025em}
+.ayu-page-intro p{max-width:740px;font-size:17px;line-height:1.65;color:var(--color-text-muted)}
+.ayu-page-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}
+.ayu-page-home #home{min-height:auto;padding:136px 0 52px}
+.ayu-page-home .hero-grid{min-height:390px}.ayu-page-home .hero-visual{height:390px}
+.ayu-home-benefits{background:var(--bg-surface);padding:32px 0}
+.ayu-benefits-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.ayu-benefits-grid article{border:1px solid var(--color-border);background:var(--bg-card);border-radius:15px;padding:24px}
+.ayu-benefits-grid h2{margin:12px 0 8px;font-size:18px}.ayu-benefits-grid p{font-size:14px;color:var(--color-text-muted);line-height:1.6}
+.ayu-benefits-grid i{color:var(--color-primary);font-size:22px}
+.ayu-page-home #popular-services{padding:50px 0 45px}.ayu-page-home #popular-services .popular-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.ayu-page-home #popular-services .section-heading{margin-bottom:30px}
+.ayu-home-cta{background:var(--bg-surface);padding:46px 0}.ayu-home-cta-row{display:flex;justify-content:space-between;align-items:center;gap:28px}
+.ayu-home-cta h2{font-size:clamp(24px,3vw,34px);line-height:1.25;max-width:700px;margin:11px 0}.ayu-home-cta p{color:var(--color-text-muted);max-width:670px;line-height:1.65}
+.ayu-home-cta .ayu-page-actions{flex:0 0 auto}
+.ayu-v14 section[id],.ayu-v14 [id^="servico-"]{scroll-margin-top:105px}
+.ayu-v14 #contact{padding-top:38px}.ayu-v14 #faq{background:var(--bg-surface)}
+@media(max-width:1120px){.ayu-v14 .nav-links{display:none}.ayu-v14 .hamburger{display:block;position:relative;z-index:1002}
+.ayu-v14 .nav-links.active{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(10px,2vh,22px);padding:80px 18px 30px;overflow-y:auto;z-index:1001}
+.ayu-v14 .nav-links.active a{display:block;padding:8px 14px;font-size:18px}}
+@media(max-width:768px){.ayu-page-intro{padding:100px 0 31px}.ayu-page-intro p{font-size:15px}
+.ayu-page-home #home{padding:95px 0 30px}.ayu-page-home .hero-grid{min-height:0;gap:20px}.ayu-page-home .hero-visual{height:185px}
+.ayu-home-benefits{padding:26px 0}.ayu-benefits-grid{grid-template-columns:1fr;gap:9px}.ayu-benefits-grid article{padding:15px 17px}
+.ayu-benefits-grid h2{margin:6px 0}.ayu-page-home #popular-services{padding:32px 0}
+.ayu-page-home #popular-services .popular-grid{display:flex!important;grid-template-columns:none!important}
+.ayu-home-cta{padding:35px 0}.ayu-home-cta-row{flex-direction:column;align-items:flex-start;gap:12px}
+.ayu-v14 #contact{padding-top:22px}}
