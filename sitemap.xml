@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ayusolution.pages.dev/</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://ayusolution.pages.dev/privacy.html</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://ayusolution.pages.dev/servicos.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://ayusolution.pages.dev/projectos.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://ayusolution.pages.dev/sobre.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://ayusolution.pages.dev/apoio-academico.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://ayusolution.pages.dev/contacto.html</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://ayusolution.pages.dev/guias.html</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://ayusolution.pages.dev/guias/computador-lento.html</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://ayusolution.pages.dev/guias/backup-seguro.html</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://ayusolution.pages.dev/guias/wifi-seguro.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://ayusolution.pages.dev/privacy.html</loc><changefreq>monthly</changefreq></url>
 </urlset>
