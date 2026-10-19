@@ -591,11 +591,47 @@ function setLanguage(code){
  code=code==='en'?'en':'pt';document.documentElement.lang=code==='en'?'en':'pt-MZ';
  document.querySelectorAll('[data-i18n]').forEach(node=>{const value=translations[code]?.[node.dataset.i18n];if(typeof value==='string')node.textContent=value;});
  ['pt','en'].forEach(key=>el('lang-'+key)?.classList.toggle('active',key===code));
- put('ayusolution-language',code);updateTheme();updateWa();
+ put('ayusolution-language',code);translateV14Content(code);updateTheme();updateWa();
  const t=el('installAppBtnText');if(t)t.textContent=code==='en'?'Install App':'Instalar App';
  const rotating=el('rotatingService');if(rotating)rotating.textContent=code==='en'?'Websites & Systems':'Websites & Sistemas';
 }
 window.setLanguage=setLanguage;
+
+// Keep the additional V14 landing/page introductions bilingual.
+function translateV14Content(code){
+ const pt=code==='pt';
+ const route=(location.pathname.split('/').pop()||'index.html');
+ const intro={
+  'servicos.html':[['Serviços tecnológicos e digitais','Discover our IT and digital services'],['Descubra todas as áreas de actuação: informática, impressoras, redes, videovigilância, websites e sistemas.','Explore our services: IT, printers, networking, CCTV, websites and management systems.']],
+  'projectos.html':[['Soluções para pessoas e negócios','Solutions for people and businesses'],['Veja exemplos e propostas de sistemas, websites, redes e manutenção. Clique num projecto para conhecer os detalhes.','Explore systems, websites, networks and technical services. Select a project to view details.']],
+  'sobre.html':[['Tecnologia útil, próxima e funcional','Practical, accessible technology'],['Conheça a nossa abordagem, o processo de trabalho e a forma como acompanhamos cada cliente.','Discover our approach, workflow and commitment to supporting our clients.']],
+  'apoio-academico.html':[['Apoio na organização de documentos','Academic document support'],['Serviços de revisão, formatação, estruturação de referências e preparação de apresentações.','Review, formatting, references and presentation preparation.']],
+  'contacto.html':[['Vamos encontrar uma solução',"Let's find a solution"],['Entre em contacto por WhatsApp ou envie um pedido detalhado através do formulário.','Contact us on WhatsApp or send a detailed request using the form.']]
+ };
+ if(intro[route]){
+  const title=document.querySelector('.ayu-page-intro h1'),subtitle=document.querySelector('.ayu-page-intro p');
+  if(title)title.textContent=intro[route][0][pt?0:1];
+  if(subtitle)subtitle.textContent=intro[route][1][pt?0:1];
+ }
+ document.querySelectorAll('.ayu-page-actions a').forEach(link=>{
+  const href=link.getAttribute('href');
+  if(href==='/contacto.html')link.textContent=pt?'Pedir orçamento':'Request a quote';
+  else if(href==='/servicos.html')link.textContent=pt?'Ver serviços':'View services';
+ });
+ const headline=document.querySelector('.ayu-home-cta h2');
+ const summary=document.querySelector('.ayu-home-cta p');
+ if(headline)headline.textContent=pt?'Tem um problema tecnológico? Estamos aqui para ajudar.':'Need technology support? We are here to help.';
+ if(summary)summary.textContent=pt?'Descreva a sua necessidade. Vamos orientar o próximo passo e preparar um orçamento adequado.':'Tell us what you need. We will discuss the next steps and prepare a tailored quote.';
+ const parts=[['Assistência técnica','IT support','Manutenção, diagnóstico e configuração de equipamentos.','Maintenance, troubleshooting and device setup.'],
+  ['Websites e sistemas','Websites and systems','Soluções digitais adaptadas a negócios e profissionais.','Digital solutions tailored to businesses and professionals.'],
+  ['Atendimento directo','Direct contact','Em Quelimane e remotamente quando o serviço permite.','In Quelimane or remotely whenever possible.']];
+ document.querySelectorAll('.ayu-benefits-grid article').forEach((article,i)=>{
+  const info=parts[i];if(!info)return;
+  const h=article.querySelector('h2'),p=article.querySelector('p');
+  if(h)h.textContent=info[pt?0:1];if(p)p.textContent=info[pt?2:3];
+ });
+}
+
 function updateWa(){
  const srv=el('service')?.value||'';
  const t=lang()==='pt'?'Olá AYU Solution, gostaria de saber mais sobre os vossos serviços.':'Hello AYU Solution, I would like to learn more about your services.';
